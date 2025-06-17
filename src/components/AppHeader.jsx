@@ -1,17 +1,40 @@
+// import '../App.css';
+
+// export default function Header(){
+//     return (
+//         <header>
+//                 <div className="header-container">
+//                     <div className="logo">Image Picker</div>
+//                     <div className="elements">
+//                         <a href="">Tools</a>
+//                         <a href="">Go Pro</a>
+//                         <a href="">Sign in</a>
+//                         <a href="">Sign up</a>
+//                     </div>
+//                 </div>
+//             </header>
+//     )
+// }
+
 import '../App.css';
 
-export default function Header(){
-    return (
-        <header>
-                <div className="header-container">
-                    <div className="logo">Image Picker</div>
-                    <div className="elements">
-                        <a href="">Tools</a>
-                        <a href="">Go Pro</a>
-                        <a href="">Sign in</a>
-                        <a href="">Sign up</a>
-                    </div>
-                </div>
-            </header>
-    )
+export default function Header({ history, onViewHistory }) {
+  return (
+    <header>
+      <div className="header-container">
+        <div className="logo">Image Picker</div>
+        <div className="elements">
+          <a href="#">Tools</a>
+          <a href="#">Go Pro</a>
+          <a href="#">Sign in</a>
+          <a href="#">Sign up</a>
+          {history.length > 0 && (
+            <button className="historyBtn" onClick={onViewHistory}>
+              View History
+            </button>
+          )}
+        </div>
+      </div>
+    </header>
+  );
 }

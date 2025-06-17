@@ -90,8 +90,116 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
+/* 
 .hexCode {
     margin-top: 8px;
     font-family: monospace;
     font-size: 14px;
+}
+
+.historyPanel {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.historyPanel h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #333;
+}
+
+.historyList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 4px;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+}
+
+.historyItem {
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  transition: border 0.2s ease;
+}
+
+.historyItem:hover,
+.historyItem:focus {
+  border-color: #5a5;
+}
+
+.historyThumb {
+  display: block;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+} */
+
+/* Toggle Button */
+.toggleHistoryBtn {
+    display: inline-block;
+    margin: 16px 0;
+    padding: 10px 18px;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(40deg, #ff6ec4, #7873f5);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* History Panel Container */
+.historyPanel {
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* History Header */
+.historyPanel h2 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+/* Thumbnail List */
+.historyList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 8px;
+}
+
+/* Each Thumbnail Item */
+.historyItem {
+    cursor: pointer;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    transition: border-color 0.2s ease;
+}
+
+.historyItem:hover {
+    border-color: #5a5;
+}
+
+/* Thumbnail Image */
+.historyThumb {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
 }
