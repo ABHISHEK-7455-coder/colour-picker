@@ -1,20 +1,6 @@
-// src/components/HistoryPage.jsx
-// import React, { useContext } from 'react';
-// import { HistoryViewContext } from '../HistoryContext';
+import { useNavigate } from 'react-router-dom';
+import './ColourExtractor.css';
 
-// export default function HistoryPage() {
-//   const { toggleHistoryView } = useContext(HistoryViewContext);
-
-//   return (
-//     <div className="history-page">
-//       <h1>History</h1>
-//       {/* Render your history items here */}
-//       <button onClick={toggleHistoryView}>Back</button>
-//     </div>
-//   );
-// }
-
-import './ColourExtractor.css'; // or separate CSS file
 function rgbToHex(r, g, b) {
   return (
     '#' +
@@ -28,27 +14,27 @@ function rgbToHex(r, g, b) {
 }
 
 export default function HistoryPage({ history }) {
+  const navigate = useNavigate();
+
+  const handleSelect = (item) => {
+    navigate('/', { state: item });
+  };
+
   return (
     <div className="historyPageContainer">
+      <button className="backBtn" onClick={() => navigate(-1)}>← Back</button>
       <h2>Image History</h2>
       {history.length === 0 ? (
         <p>No history yet.</p>
       ) : (
         <div className="historyList">
           {history.map((item, idx) => (
-            <div key={idx} className="historyItem">
-              <img
-                src={item.src}
-                alt={`History-${idx}`}
-                className="historyThumb"
-              />
+            <div key={idx} className="historyItem" onClick={() => handleSelect(item)}>
+              <img src={item.src} alt={`History-${idx}`} className="historyThumb" />
               <div className="colorGrid">
                 {item.palette.map((c, i) => (
                   <div key={i} className="colorSwatch">
-                    <div
-                      className="colorBox"
-                      style={{ backgroundColor: rgbToHex(...c) }}
-                    />
+                    <div className="colorBox" style={{ backgroundColor: rgbToHex(...c) }} />
                     <span className="hexCode">{rgbToHex(...c)}</span>
                   </div>
                 ))}
@@ -60,6 +46,7 @@ export default function HistoryPage({ history }) {
     </div>
   );
 }
+
 
 
 

@@ -1,43 +1,44 @@
-
-
-// import Header from "./components/AppHeader";
-// import ColorExtractor from "./components/ColourExtractor";
-
-// function App() {
-//     return (
-//         <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-//             <Header />
-//             <ColorExtractor />
-//         </div>
-//     );
-// }
-
-// export default App;
-
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/AppHeader';
 import ColorExtractor from './components/ColourExtractor';
 import HistoryPage from './components/HistoryPage';
 import './App.css';
 
+function HomeWrapper({ history, setHistory }) {
+  const location = useLocation();
+  return (
+    <ColorExtractor
+      history={history}
+      setHistory={setHistory}
+      initialItem={location.state}
+    />
+  );
+}
+
 function App() {
   const [history, setHistory] = useState([]);
-  const [viewingHistory, setViewingHistory] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center">
-      <Header
-        history={history}
-        onViewHistory={() => setViewingHistory((v) => !v)}
-      />
+    <Router>
+      <div className="min-h-screen bg-gray-100 flex flex-col items-center">
+        <Header history={history} />
 
-      {viewingHistory ? (
-        <HistoryPage history={history} />
-      ) : (
-        <ColorExtractor history={history} setHistory={setHistory} />
-      )}
-    </div>
+        <Routes>
+          <Route
+            path="/"
+            element={<HomeWrapper history={history} setHistory={setHistory} />}
+          />
+          <Route
+            path="/history"
+            element={<HistoryPage history={history} />}
+          />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
+
