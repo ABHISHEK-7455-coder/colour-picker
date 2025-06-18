@@ -6,37 +6,38 @@ import HistoryPage from './components/HistoryPage';
 import './App.css';
 
 function HomeWrapper({ history, setHistory }) {
-  const location = useLocation();
-  return (
-    <ColorExtractor
-      history={history}
-      setHistory={setHistory}
-      initialItem={location.state}
-    />
-  );
+    const location = useLocation();
+    return (
+        <ColorExtractor
+            history={history}
+            setHistory={setHistory}
+            initialItem={location.state}
+        />
+    );
 }
 
 function App() {
-  const [history, setHistory] = useState([]);
+    const [history, setHistory] = useState([]);
 
-  return (
-    <Router>
-      <div className="min-h-screen bg-gray-100 flex flex-col items-center">
-        <Header history={history} />
+    return (
+        <Router>
+            <div className="min-h-screen">
+                <Header history={history} />
 
-        <Routes>
-          <Route
-            path="/"
-            element={<HomeWrapper history={history} setHistory={setHistory} />}
-          />
-          <Route
-            path="/history"
-            element={<HistoryPage history={history} />}
-          />
-        </Routes>
-      </div>
-    </Router>
-  );
+                <Routes>
+                    <Route
+                        path="/"
+                        element={<HomeWrapper history={history} setHistory={setHistory} />}
+                    />
+                    <Route
+                        path="/history"
+                        element={<HistoryPage history={history} />}
+                    />
+                </Routes>
+
+            </div>
+        </Router>
+    );
 }
 
 export default App;
