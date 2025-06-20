@@ -6,6 +6,7 @@ import ColorExtractor from './components/ColorExtractor/ColourExtractor';
 import HistoryPage from './components/History/HistoryPage';
 import { ThemeProvider } from './components/ThemeContext'; // ⬅️ import the theme context
 import ColorPickerButton from './components/ColorPicker';
+import GradientMaker from './GradientMaker';
 
 function HomeWrapper({ history, setHistory }) {
   const location = useLocation();
@@ -23,6 +24,7 @@ function App() {
 
   return (
     <>
+    <GradientMaker />
     <ColorPickerButton />
     <ThemeProvider>
       <Router>

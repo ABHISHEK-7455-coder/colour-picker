@@ -2,6 +2,7 @@ import './AppHeader.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useTheme } from '../ThemeContext';
+import CustomDropdown from './Dropdown';
 
 const bgColors = ['#ffffff', '#d1d3d7', '#f8f9fa', '#222831', '#282c34'];
 const textColors = ['#000000', '#ffffff', '#ff3e3e', '#2d61f2', '#00a676'];
@@ -16,6 +17,7 @@ export default function Header({ history }) {
       <div className="headerContainer">
         <div className="logo">Color Picker</div>
         <nav className="navLinks">
+          <CustomDropdown />
           <Link to="/">Home</Link>
           <Link to="/upload">Upload</Link>
           <a href="#">Tools</a>

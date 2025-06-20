@@ -1,0 +1,93 @@
+/* ColorPickerButton.css */
+.color-picker-container {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+.color-picker-popup {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  z-index: 100;
+}
+
+.color-picker-popup label {
+  margin-right: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.color-picker-popup input[type="radio"] {
+  margin-right: 4px;
+}
+
+.react-colorful {
+  width: 260px !important;
+  border-radius: 8px;
+}
+
+.react-colorful__saturation {
+  border-radius: 6px 6px 0 0;
+}
+
+.react-colorful__hue {
+  height: 28px;
+  border-radius: 0 0 6px 6px;
+  margin-top: 5px;
+}
+
+.react-colorful__pointer {
+  width: 16px;
+  height: 16px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.result-box {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.color-preview {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.input-row {
+  margin-bottom: 8px;
+}
+.input-row input {
+  width: 100%;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.presets {
+  margin: 10px 0;
+  display: flex;
+}
+.preset-swatch {
+  width: 24px; height: 24px;
+  margin-right: 6px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  box-shadow: 0 0 1px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+.preset-swatch:hover {
+  transform: scale(1.1);
+}

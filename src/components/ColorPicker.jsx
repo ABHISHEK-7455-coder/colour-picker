@@ -6,6 +6,7 @@ import {
   HslColorPicker,
 //   CmykColorPicker,
 } from "react-colorful";
+import './ColorPickerButton.css'
 // import { defineConfig } from "vite";
 // import "react-colorful/dist/index.css";
 
@@ -38,7 +39,7 @@ const ColorPickerButton = () => {
   };
 
   return (
-    <div style={{ position: "relative", display: "inline-block" }}>
+    <div style={{ position: "relative", display: "inline-block", width: "500px" }}>
       <button onClick={() => setIsOpen(!isOpen)}>
         {isOpen ? "Close Picker" : "Open Color Picker"}
       </button>
@@ -47,12 +48,18 @@ const ColorPickerButton = () => {
         <div
           style={{
             position: "absolute",
+            display: "flex",
+            justifyContent: "space-between",
             zIndex: 100,
             background: "#fff",
             padding: 10,
             boxShadow: "0 2px 10px rgba(0,0,0,0.1)",
           }}
         >
+          
+
+          {renderPicker()}
+
           <div style={{ marginBottom: 10 }}>
             <label>
               <input
@@ -90,13 +97,13 @@ const ColorPickerButton = () => {
               />
               CMYK
             </label> */}
-          </div>
 
-          {renderPicker()}
-
-          <div style={{ marginTop: 10 }}>
+            <div style={{ marginTop: 10 }}>
             <strong>Selected:</strong> {JSON.stringify(color)}
           </div>
+          </div>
+
+          
         </div>
       )}
     </div>
