@@ -1,0 +1,58 @@
+.header {
+  width: 90%;
+  margin: 30px auto;
+  border: 1px solid #d3d3d373;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 37px;
+  /* background: linear-gradient(120deg, #ff6ec4, #7873f5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+  /* background: #FF8B4E;
+  background: linear-gradient(90deg, rgba(255, 139, 78, 1) 0%, rgba(255, 3, 105, 1) 99%); */
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 13px 24px;
+  
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+}
+
+.navLinks a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  padding: 8px 12px;
+  margin-left: 10px;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  position: relative;
+}
+
+/* .navLinks a:hover{
+  background-color: #131212;
+  color: #fff;
+} */
+/* 
+.navLinks a:active {
+  background-color: rgba(255, 255, 255, 0.2);
+} */
+.headerSearchInput {
+  margin-left: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 220px;
+}
+
+
+
+
+

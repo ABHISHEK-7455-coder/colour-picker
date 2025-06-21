@@ -9,7 +9,8 @@
   animation: fadeIn 1s ease-in;
   /* background: #FF8B4E;
   background: linear-gradient(90deg, rgba(255, 139, 78, 1) 0%, rgba(255, 3, 105, 1) 99%); */
-  background: #f3f4f6;
+  /* background: #f3f4f6; */
+   
 }
 .ImgHeading{
   display: flex;
@@ -23,14 +24,17 @@
   border-radius: 12px; */
   /* box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); */
   animation: slideUp 0.8s ease;
+  
 }
 
 .mainHeading {
-  font-size: 70px;
+  font-size: 100px;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #333;
-  color: rgba(255, 3, 105, 1);
+  /* color: #333;
+  color: rgba(255, 3, 105, 1); */
+  color:#fff;
+  margin-right: 40px;
 }
 
 .subText {
@@ -41,29 +45,82 @@
 
 .description {
   font-size: 16px;
-  color: #666;
+  /* color: #666; */
+  color:#e0e0e0;
   margin-bottom: 30px;
   line-height: 1.6;
 }
 
 .mainButton {
-  padding: 12px 24px;
+  padding:12px 68px;
   font-size: 26px;
   /* background: linear-gradient(120deg, #ff6ec4, #7873f5); */
-  background: #FF8B4E;
-  background: linear-gradient(90deg, rgba(255, 139, 78, 1) 0%, rgba(255, 3, 105, 1) 99%);
+  /* background: #FF8B4E;
+  background: linear-gradient(90deg, rgba(255, 139, 78, 1) 0%, rgba(255, 3, 105, 1) 99%); */
   color: white;
+  /* color: #000; */
+  background-color: black;
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   cursor: pointer;
   transition: transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border: none;
 }
+ .mainButton {
+    --glow-color: rgb(255 255 255);
+    --glow-spread-color: rgb(250 245 245 / 20%);
+    --enhanced-glow-color: rgb(12 12 12 / 10%);
+    --btn-color: #455A4B;
+    border: 0.25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #94A798;
+    border-radius: 8em;
+      outline: none;
+      box-shadow: 0 0 1em 0.25em var(--glow-color),
+        0 0 4em 1em var(--glow-spread-color),
+        inset 0 0 0.74em 0.25em var(--glow-color);
+      text-shadow: 0 0 0.5em var(--glow-color);
+      position: relative;
+      transition: all 0.3s;
+    }
 
-.mainButton:hover {
-  transform: scale(1.05);
-  background: linear-gradient(120deg, #dbd3d8, #9a95ff);
+    .mainButton ::after {
+      pointer-events: none;
+      content: "";
+      position: absolute;
+      top: 120%;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: var(--glow-spread-color);
+      filter: blur(2em);
+      opacity: 0.7;
+      transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+    }
+
+   .mainButton:hover {
+      color: var(--btn-color);
+      background-color: var(--glow-color);
+      box-shadow: 0 0 1em 0.25em var(--glow-color),
+      0 0 4em 2em var(--glow-spread-color),
+      inset 0 0 0.75em 0.25em var(--glow-color);
+    }
+
+   .mainButton :active {
+      box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+      0 0 2.5em 2em var(--glow-spread-color),
+      inset 0 0 0.5em 0.25em var(--glow-color);
+    }
+
+.mainButton:hover{
+  /* transform: scale(1.05); */
+  /* display: block;
+  filter: drop-shadow(0 0 10px #fffdef); */
 }
 
 @keyframes fadeIn {
@@ -80,61 +137,5 @@
 /* Services Section */
 .servicesSection {
   padding: 60px 20px;
-  background: #f3f4f6;
-  text-align: center;
+  /* background: #f3f4f6; */
 }
-
-.servicesHeading {
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.servicesList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.serviceBox {
-  background: #FF8B4E;
-  background: linear-gradient(90deg, rgba(255, 139, 78, 1) 0%, rgba(255, 3, 105, 1) 99%);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  padding: 59px;
-  width: 278px;
-   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  cursor: pointer;
-}
-
-.serviceBox h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  color:white;
-}
-
-.serviceBox p {
-  font-size: 14px;
-  color:white;
-}
-.HeroImg {
-  border-radius: 100px;
-  border: 2px solid rgb(255, 255, 255);
-  
-}
-
-
-.serviceBox:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
-  background: linear-gradient(135deg, #fceabb, #f8b500);
-  color: #fff;
-}
-
-
-
-
-
-
-

@@ -1,3 +1,4 @@
+
 .historyPageContainer {
     width: 75%;
     margin: auto;
@@ -25,9 +26,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    max-height: 315px;
+    max-height: 300px;
     overflow-y: auto;
     padding: 8px;
+    width: 84vw;
 }
 
 /* Each Thumbnail Item */
@@ -39,22 +41,50 @@
     box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
     padding: 10px;
     display: flex;
+    color: white;
+    background-color: #dedbdb9e;
+
 }
 
 /* Thumbnail Image */
 .historyThumb {
-    width: 120px;
-    height: 120px;
+    width: 182px;
+    height: 161px;
     object-fit: cover;
     border-radius: 4px;
 }
 
 .backBtn {
-    margin-bottom: 16px;
-    padding: 8px 16px;
-    background: #7873f5;
-    color: #fff;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+ .historyBtn {
+    display: inline-block;
+    margin: 16px 0;
+    padding: 10px 18px;
+    width: 125px;
+    height: 35px;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
+   /* background: #FF8B4E;
+    background: linear-gradient(90deg, rgba(255, 139, 78, 1) 0%, rgba(255, 3, 105, 1) 99%); */
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    color: white;
+    background-color:black;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.colorSwatch {
+    margin-top: 30px;
+}
+.colorGrid {
+    margin-left: 5px;
 }

@@ -1,10 +1,10 @@
 .gm-container {
   font-family: Arial, sans-serif;
-  max-width: 700px;
-  margin: 0 auto;
+  width:70vw;
+  margin: 50px auto;
   padding: 1rem;
-  background-color: #ffffff;
-  
+  background-color: #090909;
+  border-radius: 10px;
 }
 
 .gm-toggle {
@@ -19,13 +19,13 @@
   background: none;
   cursor: pointer;
   border-radius: 4px;
-  color: #088c93;
+  color: #44594A;
 }
 
 .gm-toggle button.active {
-  background: #088c93;
+  background: #44594A;
   color: white;
-  border-color: #088c93;
+  border-color: #fcfcfc;
 }
 
 .gm-angle {
@@ -33,7 +33,7 @@
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.75rem;
-  color: #088c93;
+  color: #ffffff;
 }
 
 .gm-preview {
@@ -57,11 +57,11 @@
 }
 
 span {
-    color: #088c93;
+    color: #fafefb;
 }
 
 .gm-css {
-  width: 100%;
+  width:96%;
   font-family: monospace;
   margin-top: 1rem;
   border: 1px solid #ddd;
@@ -69,13 +69,23 @@ span {
   border-radius: 4px;
   resize: none;
   color: #ddd;
-  background-color: #088c93;
+  background-color: #44594A;
 }
 
 input[type='range']{
-    accent-color: #088c93;
+    accent-color: #44594A;
 }
 
 input[type='color']{
     background: #fff;
+}
+.gradient h1{
+  text-align: center;
+    color: white;
+    font-size: 48px;
+}
+.gradient p{
+  text-align: center;
+    color: rgb(231, 229, 229);
+   
 }
