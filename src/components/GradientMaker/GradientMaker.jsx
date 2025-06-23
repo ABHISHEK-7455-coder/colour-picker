@@ -1,10 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState,useEffect } from 'react';
 import './GradientMaker.css';
+import Footer from '../Footer/Footer';
 
 export default function GradientMaker() {
-  const [stops, setStops] = useState([
+    const [stops, setStops] = useState([
     { color: '#398C7D', pos: 0 },
-    { color: '#0A3431', pos: 50 },
+    { color: '#425747', pos: 50 },
   ]);
   const [angle, setAngle] = useState(90);
   const [mode, setMode] = useState('linear');
@@ -37,7 +38,10 @@ export default function GradientMaker() {
     }
   };
 
+
+
   return (
+    <>
     <div className="gm-container">
       <div className="gm-toggle">
         <button onClick={() => { setMode('linear'); setCustomInput(''); }} className={mode==='linear'?'active':''}>Linear</button>
@@ -53,7 +57,8 @@ export default function GradientMaker() {
         </label>
       )}
 
-      <div className="gm-preview" style={{ background: gradientCSS }} />
+
+     <div className="gm-preview" style={{ background: gradientCSS }} />
 
       <div className="gm-controls">
         {stops.map((s, i) => (
@@ -70,9 +75,9 @@ export default function GradientMaker() {
       <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <textarea className="gm-css" readOnly rows={2}
           value={`background: ${gradientCSS};`} />
-        <button onClick={() => {
+        <button  onClick={() => {
           navigator.clipboard.writeText(`background: ${gradientCSS};`);
-        }}>Copy CSS</button>
+        }} className='btnGray'>Copy CSS</button>
       </div>
 
       <div style={{ marginTop: '16px' }}>
@@ -84,8 +89,14 @@ export default function GradientMaker() {
           value={customInput}
           onChange={e => setCustomInput(e.target.value)}
         />
-        <button type="button" onClick={applyCustom}>Preview Custom</button>
+        <button type="button" className='btnGray' onClick={applyCustom}>Preview Custom</button>
       </div>
-    </div>
+    </div>
+
+    
+     {<Footer/>}
+    
+    </>
+    
   );
 }

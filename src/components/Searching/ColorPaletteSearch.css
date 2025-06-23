@@ -223,3 +223,22 @@
     visibility: visible;
     opacity: 1;
 }
+
+/* Tablet & small desktop (≥ 600px) */
+@media (min-width: 600px) {
+  .color-palette-search {
+    max-width: 800px;
+    padding: 30px;
+  }
+  .results-grid {
+    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+  .palette-colors {
+    height: 120px;
+  }
+  .color-box .hex-code {
+    font-size: 14px;
+  }
+}
+

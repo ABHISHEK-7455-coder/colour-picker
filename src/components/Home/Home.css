@@ -57,9 +57,9 @@
   /* background: linear-gradient(120deg, #ff6ec4, #7873f5); */
   /* background: #FF8B4E;
   background: linear-gradient(90deg, rgba(255, 139, 78, 1) 0%, rgba(255, 3, 105, 1) 99%); */
-  color: white;
+  background-color: rgb(255, 255, 255);
   /* color: #000; */
-  background-color: black;
+  color: #44594A;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -67,58 +67,10 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border: none;
 }
- .mainButton {
-    --glow-color: rgb(255 255 255);
-    --glow-spread-color: rgb(250 245 245 / 20%);
-    --enhanced-glow-color: rgb(12 12 12 / 10%);
-    --btn-color: #455A4B;
-    border: 0.25em solid var(--glow-color);
-    padding: 1em 3em;
-    color: #fff;
-    font-size: 19px;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #94A798;
-    border-radius: 8em;
-      outline: none;
-      box-shadow: 0 0 1em 0.25em var(--glow-color),
-        0 0 4em 1em var(--glow-spread-color),
-        inset 0 0 0.74em 0.25em var(--glow-color);
-      text-shadow: 0 0 0.5em var(--glow-color);
-      position: relative;
-      transition: all 0.3s;
-    }
 
-    .mainButton ::after {
-      pointer-events: none;
-      content: "";
-      position: absolute;
-      top: 120%;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: var(--glow-spread-color);
-      filter: blur(2em);
-      opacity: 0.7;
-      transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
-    }
-
-   .mainButton:hover {
-      color: var(--btn-color);
-      background-color: var(--glow-color);
-      box-shadow: 0 0 1em 0.25em var(--glow-color),
-      0 0 4em 2em var(--glow-spread-color),
-      inset 0 0 0.75em 0.25em var(--glow-color);
-    }
-
-   .mainButton :active {
-      box-shadow: 0 0 0.6em 0.25em var(--glow-color),
-      0 0 2.5em 2em var(--glow-spread-color),
-      inset 0 0 0.5em 0.25em var(--glow-color);
-    }
 
 .mainButton:hover{
-  /* transform: scale(1.05); */
+  transform: scale(1.05);
   /* display: block;
   filter: drop-shadow(0 0 10px #fffdef); */
 }
@@ -138,4 +90,216 @@
 .servicesSection {
   padding: 60px 20px;
   /* background: #f3f4f6; */
+  text-align: center;
+}
+.pickergen{  
+    width: 60vw;
+    margin: auto;
+    color: white;
+    margin-bottom:10vh;
+    margin-top:15vh;
+  }
+  .pickergen h1{
+    text-align: center;
+  }
+.servicesHeading {
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.servicesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.serviceBox {
+  background-color: black;
+  border:1px solid white;
+  /* background: #FF8B4E;
+  background: linear-gradient(90deg, rgba(255, 139, 78, 1) 0%, rgba(255, 3, 105, 1) 99%); */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 59px;
+  width: 278px;
+   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+
+.serviceBox h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color:white;
+}
+
+.serviceBox p {
+  font-size: 14px;
+  color:white;
+}
+.HeroImg {
+  margin-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius:  1px 120px;
+  border: 2px solid rgb(255, 255, 255);
+  
+}
+
+
+.serviceBox:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+ 
+}
+.forPalettes{
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  
+    overflow-x: hidden;
+   
+}
+
+.homeContainer {
+    padding: 20px;
+}
+
+.heroSection {
+    text-align: center;
+    margin-bottom: 20px;
+} */
+
+.cards-container {
+    display: flex;
+    width: 84%;
+    max-width: 1200px;
+    position: relative;
+    justify-content: center;
+    margin:auto
+}
+
+.card {
+    position: relative;
+    min-width: 250px;
+    height: 400px;
+    background: #222;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-left: -40px; /* Creates the overlap effect */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.card:first-child {
+    margin-left: 0;
+}
+
+.card:hover {
+    transform: translateY(-20px);
+    z-index: 20 !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+    transform: translateY(40px);
+}
+
+.card:hover .card-content {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-desc {
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.card:hover .card-desc {
+    opacity: 0.8;
+    transition-delay: 0.3s;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        margin-left: 0;
+        margin-top: -80px;
+        min-width: 80%;
+        height: 300px;
+    }
+
+    .card:first-child {
+        margin-top: 0;
+    }
+
+    .card:hover {
+        width: 85%;
+        height: 320px;
+    }
 }

@@ -97,3 +97,13 @@
   visibility: visible;
   opacity: 1;
 }
+
+
+/* Tablet & small desktop (≥ 600px) */
+@media screen and (min-width: 600px) {
+  .colorBlockContainer {
+    width: calc(30vw - 20px);
+    max-width: 100px;
+  }
+}
+

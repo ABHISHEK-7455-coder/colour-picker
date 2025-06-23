@@ -105,6 +105,7 @@
   font-size: 25px;
   background-color: #475C4D;
 }
+
 /* .file-input label:hover{
  background: linear-gradient(40deg, #ff6ec4, #7873f5);
 } */
@@ -312,4 +313,23 @@
 @keyframes slideUp {
   from { transform: translateY(30px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+@media screen and (min-width: 992px) {
+  .mainContainer {
+    width: 80vw;
+  }
+  .title {
+    font-size: 70px;
+  }
+  .subtitle {
+    font-size: 18px;
+  }
+}
+
+/* Optional: hide or adjust elements on narrow devices */
+@media screen and (max-width: 400px) {
+  .subtitle {
+    display: none;
+  }
 }

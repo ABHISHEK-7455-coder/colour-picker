@@ -18,15 +18,13 @@
   
 }
 
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: white;
+.logo img{
+  border-radius: 30px;
 }
 
 .navLinks a {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 16px;
   color: white;
   padding: 8px 12px;
   margin-left: 10px;
@@ -56,3 +54,52 @@
 
 
 
+
+.auth-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.username {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.logout-btn {
+  background-color: #02020200;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+
+/* Tablet and up (≥ 600px) */
+@media (min-width: 600px) {
+  .header {
+    width: 90%;
+  }
+  .headerContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navLinks {
+    flex-direction: row;
+    width: auto;
+  }
+  .navLinks a {
+    width: auto;
+    margin-left: 10px;
+    padding: 8px 12px;
+  }
+  .headerSearchInput {
+    margin-left: 16px;
+    width: 220px;
+  }
+  .auth-section {
+    flex-direction: row;
+  }
+}

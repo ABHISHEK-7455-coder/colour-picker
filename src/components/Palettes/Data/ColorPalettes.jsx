@@ -1417,5 +1417,5 @@ const colorData = {
   colorNames: colorNames
 };
 
-export default colorData
+export default colorData;
 

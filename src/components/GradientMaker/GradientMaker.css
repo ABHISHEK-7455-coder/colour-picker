@@ -19,7 +19,7 @@
   background: none;
   cursor: pointer;
   border-radius: 4px;
-  color: #44594A;
+  color: #ffffff;
 }
 
 .gm-toggle button.active {
@@ -88,4 +88,36 @@ input[type='color']{
   text-align: center;
     color: rgb(231, 229, 229);
    
+}
+.btnGray{
+  background-color: #4B6050;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+
+/* Tablet and up (≥ 600px) */
+@media (min-width: 600px) {
+  .gm-container {
+    width: 80vw;
+    max-width: 700px;
+  }
+  .gm-preview {
+    height: 220px;
+  }
+  .gm-controls {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  input[type='color'] {
+    width: auto;
+    flex: 1 1 40%;
+  }
+  .btnGray {
+    margin: 0;
+    align-self: flex-start;
+  }
 }

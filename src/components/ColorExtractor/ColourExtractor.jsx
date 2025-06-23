@@ -110,6 +110,7 @@ import { useState, useEffect } from 'react';
 import ColorThief from 'colorthief';
 import './ColourExtractor.css';
 import PaletteGrid from '../Palettes/PaletteGrid';
+import Footer from '../Footer/Footer';
 
 function rgbToHex(r, g, b) {
   return (
@@ -220,7 +221,7 @@ export default function ColorExtractor({ history, setHistory, initialItem }) {
       </div>
       <div>
         <PaletteGrid />
-        {/* <SearchPalettes /> */}
+        <Footer/>
       </div>
     </div>
   );
