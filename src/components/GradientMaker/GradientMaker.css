@@ -98,8 +98,7 @@ input[type='color']{
 }
 
 
-/* Tablet and up (≥ 600px) */
-@media (min-width: 600px) {
+@media (min-width: 300px) {
   .gm-container {
     width: 80vw;
     max-width: 700px;

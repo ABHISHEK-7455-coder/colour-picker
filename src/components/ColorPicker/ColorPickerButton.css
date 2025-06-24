@@ -185,8 +185,8 @@
   }
 }
 
-/* Desktop breakpoint — larger screens */
-@media (min-width: 992px) {
+
+@media (min-width: 300px) {
   .color-slider {
     height: 200px;
   }

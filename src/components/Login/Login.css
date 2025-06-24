@@ -78,8 +78,8 @@
   text-decoration: underline;
 }
 
-/* Tablet and up (≥ 600px) */
-@media (min-width: 600px) {
+
+@media (min-width: 300px) {
   .login-form {
     padding: 2rem;
     max-width: 400px;

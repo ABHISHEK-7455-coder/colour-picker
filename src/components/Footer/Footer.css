@@ -7,7 +7,7 @@
 
 .footerGrid {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   max-width: 1200px;
   margin: auto;
@@ -51,12 +51,12 @@
 }
 
 
-@media (min-width: 600px) {
+@media (min-width: 300px) {
   .footerGrid {
     justify-content: space-between;
   }
   .footerColumn {
-    flex: 1 1 45%;
+    flex: 1 1 50%;
     margin: 10px;
   }
   .footerColumn h4,

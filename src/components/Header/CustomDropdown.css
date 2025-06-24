@@ -49,8 +49,8 @@ h5 {
 }
 
 
-/* Tablet & small desktop (≥ 600px) */
-@media screen and (min-width: 600px) {
+
+@media (min-width: 300px) {
   .dropdown {
     display: inline-block;
     width: auto;
@@ -62,8 +62,8 @@ h5 {
   }
   .dropdown-menu {
     position: absolute;
-    width: 200px;
-    right: 0;
+    width: 150px;
+    right: -35px;
     top: 30px;
   }
 }

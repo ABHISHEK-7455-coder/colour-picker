@@ -224,8 +224,8 @@
     opacity: 1;
 }
 
-/* Tablet & small desktop (≥ 600px) */
-@media (min-width: 600px) {
+
+@media (min-width: 300px) {
   .color-palette-search {
     max-width: 800px;
     padding: 30px;

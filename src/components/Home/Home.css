@@ -159,37 +159,6 @@
   align-items: center;
 }
 
-/* 
-
-
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-  
-    overflow-x: hidden;
-   
-}
-
-.homeContainer {
-    padding: 20px;
-}
-
-.heroSection {
-    text-align: center;
-    margin-bottom: 20px;
-} */
-
 .cards-container {
     display: flex;
     width: 84%;
@@ -280,8 +249,8 @@ body {
     opacity: 1;
 }
 
-/* Responsive adjustments */
-@media (max-width: 900px) {
+
+@media (min-width: 300px) {
     .cards-container {
         flex-direction: column;
         align-items: center;
@@ -301,5 +270,32 @@ body {
     .card:hover {
         width: 85%;
         height: 320px;
+    }
+
+    .serviceBox{
+      padding: 20px;
+      width: 200px;
+      height: auto;
+    }
+    
+    .mainHeading{
+      font-size: 30px;
+    }
+
+    .HeroImg{
+      width: 100px;
+      height: 140px;
+      border-radius: 1px 50px;
+      margin-left: 5px;
+    }
+
+    .homeContainer{
+      width: 100%;
+    }
+
+    .card:hover {
+      opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
     }
 }
