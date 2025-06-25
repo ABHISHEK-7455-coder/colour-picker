@@ -106,7 +106,7 @@
 
 
 
-@media (min-width: 300px) {
+@media (max-width: 300px) {
   .historyPageContainer {
     width: 90vw;
     max-width: 720px;

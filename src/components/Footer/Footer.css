@@ -51,9 +51,12 @@
 }
 
 
-@media (min-width: 300px) {
+@media (max-width: 300px) {
   .footerGrid {
     justify-content: space-between;
+    display: block;
+    flex: 200px 200px 200px;
+  
   }
   .footerColumn {
     flex: 1 1 50%;
@@ -62,5 +65,8 @@
   .footerColumn h4,
   .footerColumn ul {
     text-align: left;
+
   }
+
+  
 }
