@@ -13,22 +13,29 @@ export default function Header({ history }) {
               src="./ImgeLog1.png"
               height={40}
               width={200}
-            /></div>
-        <nav className="navLinks">
-          <Link to="/">Home</Link>
-          <Link to="/upload">Palette Generator</Link>
-          <Link to="/Palettes">Explore Palettes</Link>
-          <CustomDropdown />
-          <a href="#">Sign In</a>
-          {history.length > 0 && (
-            <button
-              className="historyBtn"
-              onClick={() => navigate('/history')}
-            >
-              View History
-            </button>
-          )}
-        </nav>
+            />
+            </div>
+        <nav class="navLinks">
+  <input type="checkbox" id="nav-toggle" />
+
+  <label htmlFor="nav-toggle" className="hamburger">
+    ☰
+  </label>
+
+  <div class="menu">
+    <a href="/">Home</a>
+    <a href="/upload">Palette Generator</a>
+    <a href="/Palettes">Explore Palettes</a>
+    <CustomDropdown />
+    <a href="#">Sign In</a>
+    {history.length > 0 && (
+      <button className="historyBtn" onClick={() => navigate('/history')}>
+        View History
+      </button>
+    )}
+  </div>
+</nav>
+
       </div>
     </header>
   );

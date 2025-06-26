@@ -7,15 +7,9 @@ function Home() {
     <>
       <div className="homeContainer">
         <div className="heroSection">
-          <div className="ImgHeading">
-            {/* <img
-              src="https://png.pngtree.com/png-clipart/20230323/original/pngtree-happy-holi-colors-splash-powder-festival-of-india-png-image_9001435.png"
-              alt="Holi splash"
-              height={250}
-              width={300}
-            /> */}
+          
+            
             <h1 className="mainHeading">Color Palettes</h1>
-          </div>
 
           <p className="description">
             Find the perfact color palettes for your projects.

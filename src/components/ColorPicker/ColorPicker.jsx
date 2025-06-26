@@ -218,7 +218,7 @@ const adjustColorBrightness = (hex, percent) => {
                         </div>
                         {renderPicker()}
                         <div className="selected-color">
-                            <strong>Selected:</strong> {color}
+                            <div>Selected:- {color}</div>
                             <button onClick={() => handleColorCopy(color) }>Copy</button>
                         </div>
                     </div>

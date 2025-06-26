@@ -72,24 +72,24 @@ export default function GradientMaker() {
         ))}
       </div>
 
-      <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <div style={{  alignItems: 'center', gap: '8px' }}>
         <textarea className="gm-css" readOnly rows={2}
-          value={`background: ${gradientCSS};`} />
+          value={`${gradientCSS};`} />
         <button  onClick={() => {
           navigator.clipboard.writeText(`background: ${gradientCSS};`);
         }} className='btnGray'>Copy CSS</button>
       </div>
 
       <div style={{ marginTop: '16px' }}>
-        <label>Paste any gradient:</label>
+        <label style={{color:"#fff"}}>Paste any gradient :</label>
         <textarea
-          className="gm-css"
+          className="gm-css2"
           rows={2}
           placeholder="e.g. linear-gradient(45deg, red, yellow)"
           value={customInput}
           onChange={e => setCustomInput(e.target.value)}
         />
-        <button type="button" className='btnGray' onClick={applyCustom}>Preview Custom</button>
+        <button type="button" className='btnGray2' onClick={applyCustom}>Preview Custom</button>
       </div>
     </div>
 

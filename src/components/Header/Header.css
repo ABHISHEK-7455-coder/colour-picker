@@ -21,6 +21,30 @@
 .logo img{
   border-radius: 30px;
 }
+.navLinks {
+  position: relative;
+}
+
+/* Hide the toggle checkbox */
+#nav-toggle {
+  display: none;
+}
+
+/* Default: hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+}
+
+/* Menu shown by default on larger screens */
+.menu {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
 
 .navLinks a {
   text-decoration: none;
@@ -42,11 +66,6 @@
   font-size: 1rem;
   width: 220px;
 }
-
-
-
-
-
 
 .auth-section {
   display: flex;
@@ -70,7 +89,7 @@
 
 
 
-@media (min-width: 300px) {
+@media (max-width: 390px) {
   .header {
     width: 90%;
   }
@@ -78,16 +97,49 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 5px;
   }
+
+  .hamburger {
+    display: block;
+    color: #ccc;
+  }
+
   .navLinks {
     flex-direction: row;
     width: auto;
   }
-  .navLinks a {
+  /* .navLinks a {
     width: auto;
     margin-left: 10px;
     padding: 8px 12px;
+  } */
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #131313;
+    position: absolute;
+    top: 100%;
+    left: -100px;
+    right: 0;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
   }
+
+  #nav-toggle:checked + .hamburger + .menu {
+    display: flex;
+  }
+
+  .menu a,
+  .menu .historyBtn,
+  .menu CustomDropdown {
+    padding: 12px;
+    width: 100%;
+    text-align: center;
+  }
+
   .headerSearchInput {
     margin-left: 16px;
     width: 20px;

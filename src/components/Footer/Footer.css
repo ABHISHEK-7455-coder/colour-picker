@@ -51,7 +51,7 @@
 }
 
 
-@media (max-width: 300px) {
+@media (max-width: 390px) {
   .footerGrid {
     justify-content: space-between;
     display: block;
@@ -65,8 +65,19 @@
   .footerColumn h4,
   .footerColumn ul {
     text-align: left;
-
   }
+
+  .footerColumn li {
+    color: #4b4949;
+  }
+
+  .footerBottom {
+  text-align: center;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #4b4949;
+  border-top: 1px solid #e5e5e5;
+}
 
   
 }

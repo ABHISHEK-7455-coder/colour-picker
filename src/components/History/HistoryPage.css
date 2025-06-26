@@ -106,7 +106,7 @@
 
 
 
-@media (max-width: 300px) {
+@media (min-width: 300px) {
   .historyPageContainer {
     width: 90vw;
     max-width: 720px;
@@ -128,16 +128,16 @@
   .backBtn button,
   .backBtn a {
     width: 150px;
-    margin: 0 auto 20px;
+    margin: 0px auto 0px;
   }
   .HistoryHeading {
     font-size: 3rem;
   }
   .colorBox {
-    width: 55px;
-    height: 55px;
+    width: 60px;
+    height: 50px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    padding: 10px;
+    /* margin: 6px; */
 }
 }
