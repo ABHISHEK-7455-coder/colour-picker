@@ -1,753 +1,158 @@
-const Data = [{
-    "category": "summer",
-    "palettes": [
-        {
-            "id": "summer-001",
-            "colors": ["#3674B5", "#578FCA", "#F5F0CD", "#FADA7A"]
-        },
-        {
-            "id": "summer-002",
-            "colors": ["#7B4019", "#FF7D29", "#FFBF78", "#FFEEA9"]
-        },
-        {
-            "id": "summer-003",
-            "colors": ["#FFF1CA", "#FFB823", "#708A58", "#2D4F2B"]
-        },
-        {
-            "id": "summer-004",
-            "colors": ["#FFFADC", "#B6F500", "#A4DD00", "#98CD00"]
-        },
-        {
-            "id": "summer-005",
-            "colors": ["#FE5D26", "#F2C078", "#FAEDCA", "#C1DBB3"]
-        },
-        {
-            "id": "summer-006",
-            "colors": ["#537D5D", "#73946B", "#9EBC8A", "#D2D0A0"]
-        },
-        {
-            "id": "summer-007",
-            "colors": ["#4ED7F1", "#6FE6FC", "#A8F1FF", "#FFFA8D"]
-        },
-        {
-            "id": "summer-008",
-            "colors": ["#F3F3E0", "#27548A", "#183B4E", "#DDA853"]
-        },
-        {
-            "id": "summer-009",
-            "colors": ["#626F47", "#A4B465", "#F5ECD5", "#F0BB78"]
-        },
-        {
-            "id": "summer-010",
-            "colors": ["#F1BA88", "#E9F5BE", "#81E7AF", "#03A791"]
-        },
-        {
-            "id": "summer-011",
-            "colors": ["#F8F4E1", "#FEBA17", "#74512D", "#4E1F00"]
-        },
-        {
-            "id": "summer-012",
-            "colors": ["#FFF085", "#FCB454", "#FF9B17", "#F16767"]
-        },
-        {
-            "id": "summer-013",
-            "colors": ["#FAF1E6", "#FDFAF6", "#E4EFE7", "#99BC85"]
-        },
-        {
-            "id": "summer-014",
-            "colors": ["#80CBC4", "#B4EBE6", "#FBF8EF", "#FFB433"]
-        },
-        {
-            "id": "summer-015",
-            "colors": ["#626F47", "#A4B465", "#FFCF50", "#FEFAE0"]
-        },
-        {
-            "id": "summer-016",
-            "colors": ["#FCE7C8", "#B1C29E", "#FADA7A", "#F0A04B"]
-        },
-        {
-            "id": "summer-017",
-            "colors": ["#A94A4A", "#F4D793", "#FFF6DA", "#889E73"]
-        },
-        {
-            "id": "summer-018",
-            "colors": ["#EB5A3C", "#DF9755", "#E7D283", "#EDF4C2"]
-        },
-        {
-            "id": "summer-019",
-            "colors": ["#5D8736", "#809D3C", "#A9C46C", "#F4FFC3"]
-        },
-        {
-            "id": "summer-020",
-            "colors": ["#B1F0F7", "#81BFDA", "#F5F0CD", "#FADA7A"]
-        },
-        {
-            "id": "summer-021",
-            "colors": ["#C2FFC7", "#9EDF9C", "#62825D", "#526E48"]
-        },
-        {
-            "id": "summer-022",
-            "colors": ["#C4E1F6", "#FEEE91", "#FFBD73", "#FF9D3D"]
-        },
-        {
-            "id": "summer-023",
-            "colors": ["#A2D2DF", "#F6EFBD", "#E4C087", "#BC7C7C"]
-        },
-        {
-            "id": "summer-024",
-            "colors": ["#00FF9C", "#B6FFA1", "#FEFFA7", "#FFE700"]
-        },
-        {
-            "id": "summer-025",
-            "colors": ["#72BF78", "#A0D683", "#D3EE98", "#FEFF9F"]
-        },
-        {
-            "id": "summer-026",
-            "colors": ["#A66E38", "#FFAD60", "#FFEEAD", "#96CEB4"]
-        },
-        {
-            "id": "summer-027",
-            "colors": ["#B7E0FF", "#FFF5CD", "#FFCFB3", "#E78F81"]
-        }, {
-            "id": "summer-028",
-            "colors": ["#D2FF72", "#73EC8B", "#54C392", "#15B392"]
-        },
-        {
-            "id": "summer-029",
-            "colors": ["#87A2FF", "#C4D7FF", "#FFD7C4", "#FFF4B5"]
-        },
-        {
-            "id": "summer-030",
-            "colors": ["#347928", "#C0EBA6", "#FFFBE6", "#FCCD2A"]
-        },
-        {
-            "id": "summer-031",
-            "colors": ["#D2E0FB", "#FEF9D9", "#DEE5D4", "#8EACCD"]
-        },
-        {
-            "id": "summer-032",
-            "colors": ["#A1D6B2", "#CEDF9F", "#F1F3C2", "#E8B86D"]
-        },
-        {
-            "id": "summer-033",
-            "colors": ["#C0C78C", "#A6B37D", "#FEFAE0", "#B99470"]
-        },
-        {
-            "id": "summer-034",
-            "colors": ["#00712D", "#D5ED9F", "#FFFBE6", "#FF9100"]
-        },
-        {
-            "id": "summer-035",
-            "colors": ["#F6E96B", "#BEDC74", "#A2CA71", "#387F39"]
-        },
-        {
-            "id": "summer-036",
-            "colors": ["#F6FB7A", "#B4E380", "#88D66C", "#73BBA3"]
-        },
-        {
-            "id": "summer-037",
-            "colors": ["#36BA98", "#E9C46A", "#F4A261", "#E76F51"]
-        },
-        {
-            "id": "summer-038",
-            "colors": ["#365E32", "#81A263", "#E7D37F", "#FD9B63"]
-        },
-        {
-            "id": "summer-039",
-            "colors": ["#FEFFD2", "#FFEEA9", "#FFBF78", "#FF7D29"]
-        },
-        {
-            "id": "summer-040",
-            "colors": ["#FFFDB5", "#6FDCE3", "#5C88C4", "#5C2FC2"]
-        },
-        {
-            "id": "summer-041",
-            "colors": ["#FF0000", "#FFA27F", "#FFE8C5", "#97BE5A"]
-        },
-        {
-            "id": "summer-042",
-            "colors": ["#FFA62F", "#FFC96F", "#FFE8C8", "#ACD793"]
-        },
-        {
-            "id": "summer-043",
-            "colors": ["#006769", "#40A578", "#9DDE8B", "#E6FF94"]
-        },
-        {
-            "id": "summer-044",
-            "colors": ["#C3FF93", "#FFDB5C", "#FFAF61", "#FF70AB"]
-        },
-        {
-            "id": "summer-045",
-            "colors": ["#FFF9D0", "#CAF4FF", "#A0DEFF", "#5AB2FF"]
-        },
-        {
-            "id": "summer-046",
-            "colors": ["#03AED2", "#68D2E8", "#FDDE55", "#FEEFAD"]
-        },
-        {
-            "id": "summer-047",
-            "colors": ["#F3CA52", "#F6E9B2", "#0A6847", "#7ABA78"]
-        },
-        {
-            "id": "summer-048",
-            "colors": ["#F5DAD2", "#FCFFE0", "#BACD92", "#75A47F"]
-        },
-        {
-            "id": "summer-049",
-            "colors": ["#DBA979", "#ECCA9C", "#E8EFCF", "#AFD198"]
-        },
-        {
-            "id": "summer-050",
-            "colors": ["#FFFBDA", "#FFEC9E", "#FFBB70", "#ED9455"]
-        },
-        {
-            "id": "summer-051",
-            "colors": ["#B3C8CF", "#BED7DC", "#F1EEDC", "#E5DDC5"]
-        },
-        {
-            "id": "summer-052",
-            "colors": ["#F8F6E3", "#97E7E1", "#6AD4DD", "#7AA2E3"]
-        },
-        {
-            "id": "summer-053",
-            "colors": ["#D9EDBF", "#FF9800", "#2C7865", "#90D26D"]
-        },
-        {
-            "id": "summer-054",
-            "colors": ["#008DDA", "#41C9E2", "#ACE2E1", "#F7EEDD"]
-        },
-        {
-            "id": "summer-055",
-            "colors": ["#A5DD9B", "#C5EBAA", "#F6F193", "#F2C18D"]
-        },
-        {
-            "id": "summer-056",
-            "colors": ["#FFF67E", "#BFEA7C", "#9BCF53", "##416D19"]
-        },
-        {
-            "id": "summer-057",
-            "colors": ["#E8C872", "#FFF3CF", "#C9D7DD", "#637A9F"]
-        },
-        {
-            "id": "summer-058",
-            "colors": ["#E1F0DA", "#D4E7C5", "#BFD8AF", "#99BC85"]
-        },
-        {
-            "id": "summer-059",
-            "colors": ["#FF9843", "#FFDD95", "#86A7FC", "#3468C0"]
-        },
-        {
-            "id": "summer-060",
-            "colors": ["#D9EDBF", "#FFB996", "#FFCF81", "#FDFFAB"]
-        },
-        {
-            "id": "summer-061",
-            "colors": ["#FFFFEC", "#F1E4C3", "#C6A969", "#597E52"]
-        },
-        {
-            "id": "summer-062",
-            "colors": ["#4F6F52", "#739072", "#86A789", "#D2E3C8"]
-        },
-        {
-            "id": "summer-063",
-            "colors": ["#88AB8E", "#88AB8E", "#EEE7DA", "#F2F1EB"]
-        },
-    ]
-},
-{
-    "category": "warm",
-    "palettes": [
-        {
-            "id": "warm-001",
-            "colors": ["#7B4019", "#FF7D29", "#FFBF78", "#FFEEA9"]
-        },
-        {
-            "id": "warm-002",
-            "colors": ["#FCEF91", "#FB9E3A", "#E6521F", "#EA2F14"]
-        },
-        {
-            "id": "warm-003",
-            "colors": ["#4B352A", "#CA7842", "#B2CD9C", "#F0F2BD"]
-        },
-        {
-            "id": "warm-004",
-            "colors": ["#533B4D", "#F564A9", "#FAA4BD", "#FAE3C6"]
-        },
-        {
-            "id": "warm-005",
-            "colors": ["#FBDB93", "#BE5B50", "#8A2D3B", "#641B2E"]
-        },
-        {
-            "id": "warm-006",
-            "colors": ["#3A0519", "#670D2F", "#A53860", "#EF88AD"]
-        },
-        {
-            "id": "warm-007",
-            "colors": ["#FEF3E2", "#F3C623", "#FFB22C", "#FA812F"]
-        },
-        {
-            "id": "warm-008",
-            "colors": ["#A86523", "#E9A319", "#FAD59A", "#FCEFCB"]
-        },
-        {
-            "id": "warm-009",
-            "colors": ["#4A102A", "#A4B465", "#C5172E", "#FCF259"]
-        },
-        {
-            "id": "warm-010",
-            "colors": ["#000000", "#8E1616", "#E8C999", "#F8EEDF"]
-        },
-        {
-            "id": "warm-011",
-            "colors": ["#F8F4E1", "#FEBA17", "#74512D", "#4E1F00"]
-        },
-        {
-            "id": "warm-012",
-            "colors": ["#A62C2C", "#E83F25", "#EA7300", "#D3CA79"]
-        },
-        {
-            "id": "warm-013",
-            "colors": ["#FFF085", "#FCB454", "#FF9B17", "#F16767"]
-        },
-        {
-            "id": "warm-014",
-            "colors": ["#604652", "#735557", "#97866A", "#D29F80"]
-        },
-        {
-            "id": "warm-015",
-            "colors": ["#210F37", "#4F1C51", "#A55B4B", "#DCA06D"]
-        },
-        {
-            "id": "warm-016",
-            "colors": ["#7D0A0A", "#BF3131", "#EAD196", "#EEEEEE"]
-        },
-        {
-            "id": "warm-017",
-            "colors": ["#EBE8DB", "#D76C82", "#B03052", "#3D0301"]
-        },
-        {
-            "id": "warm-018",
-            "colors": ["#D84040", "#A31D1D", "#ECDCBF", "#F8F2DE"]
-        },
-        {
-            "id": "warm-019",
-            "colors": ["#FFB200", "#EB5B00", "#D91656", "#640D5F"]
-        },
-        {
-            "id": "warm-020",
-            "colors": ["#C14600", "#FF9D23", "#E5D0AC", "#FEF9E1"]
-        },
-        {
-            "id": "warm-021",
-            "colors": ["#E52020", "#FBA518", "#F9CB43", "#A89C29"]
-        },
-        {
-            "id": "warm-022",
-            "colors": ["#FFCDB2", "#FFB4A2", "#E5989B", "#B5828C"]
-        },
-        {
-            "id": "warm-023",
-            "colors": ["#FCE7C8", "#B1C29E", "#FADA7A", "#F0A04B"]
-        },
-        {
-            "id": "warm-024",
-            "colors": ["#B82132", "#D2665A", "#F2B28C", "#F6DED8"]
-        },
-        {
-            "id": "warm-025",
-            "colors": ["#09122C", "#872341", "#BE3144", "#E17564"]
-        },
-        {
-            "id": "warm-026",
-            "colors": ["#EB5A3C", "#DF9755", "#E7D283", "#EDF4C2"]
-        },
-        {
-            "id": "warm-027",
-            "colors": ["#FEF9E1", "#E5D0AC", "#A31D1D", "#6D2323"]
-        }, {
-            "id": "warm-028",
-            "colors": ["#B6CBBD", "#754E1A", "#CBA35C", "#F8E1B7"]
-        },
-        {
-            "id": "warm-029",
-            "colors": ["#C30E59", "#E82561", "#F2AE66", "#E8E7AB"]
-        },
-        {
-            "id": "warm-030",
-            "colors": ["#8D0B41", "#D39D55", "#D6CFB4", "#FFF8E6"]
-        },
-        {
-            "id": "warm-031",
-            "colors": ["#FFF0DC", "#F0BB78", "#543A14", "#131010"]
-        },
-        {
-            "id": "warm-032",
-            "colors": ["#FCFFC1", "#FFE893", "#FBB4A5", "#FB9EC6"]
-        },
-        {
-            "id": "warm-033",
-            "colors": ["#F29F58", "#AB4459", "#441752", "#1B1833"]
-        },
-        {
-            "id": "warm-034",
-            "colors": ["#8174A0", "#A888B5", "#EFB6C8", "#FFD2A0"]
-        },
-        {
-            "id": "warm-035",
-            "colors": ["#AA5486", "#FC8F54", "#FDE7BB", "#FBF4DB"]
-        },
-        {
-            "id": "warm-036",
-            "colors": ["#DCE4C9", "#F5F5DC", "#B6A28E", "#E07B39"]
-        },
-        {
-            "id": "warm-037",
-            "colors": ["#FEF3E2", "#FAB12F", "#FA812F", "#FA4032"]
-        },
-        {
-            "id": "warm-038",
-            "colors": ["#FCF596", "#FBD288", "#FF9C73", "#FF4545"]
-        },
-        {
-            "id": "warm-039",
-            "colors": ["#740938", "#AF1740", "#CC2B52", "#DE7C7D"]
-        },
-        {
-            "id": "warm-040",
-            "colors": ["#FFB38E", "#FFCF9D", "#FFB26F", "#DE8F5F"]
-        },
-    ]
-},
+"happy-001": { colors: ["#FFFBDE","#91C8E4","#749BC2","#4682A9"], category_id: 7 },
+"happy-002": { colors: ["#347433","#FFC107","#FF6F3C","#B22222"], category_id: 7 },
+"happy-003": { colors: ["#4DA8DA","#80D8C3","#FFD66B","#F5F5F5"], category_id: 7 },
+"happy-004": { colors: ["#FFDCDC","#3E432E","#FFE8CD","#FFD6BA"], category_id: 7 },
+"happy-005": { colors: ["#FFE99A","#FFD586","#FFAAAA","#FF9898"], category_id: 7 },
+"happy-006": { colors: ["#ECFAE5","#DDF6D2","#CAE8BD","#B0DB9C"], category_id: 7 },
+"happy-007": { colors: ["#FEF3E2","#F3C623","#FFB22C","#FA812F"], category_id: 7 },
+"happy-008": { colors: ["#FF90BB","#FFC1DA","#F8F8E1","#8ACCD5"], category_id: 7 },
+"happy-009": { colors: ["#F1BA88","#E9F5BE","#81E7AF","#03A791"], category_id: 7 },
+"happy-010": { colors: ["#FF8282","#FF6363","#BEE4D0","#DBFFCB"], category_id: 7 },
+"happy-011": { colors: ["#000000","#3E432E","#616F39","#A7D129"], category_id: 7 },
+"happy-012": { colors: ["#6DE1D2","#FFD63A","#FFA955","#F75A5A"], category_id: 7 },
+"happy-013": { colors: ["#60B5FF","#3E432E","#AFDDFF","#A7D129"], category_id: 7 },
+"happy-014": { colors: ["#FFECDB","#FF9149","#E69DB8","#F1E7E7"], category_id: 7 },
+"happy-015": { colors: ["#3F7D58","#EFEFEF","#EC5228","#EF9651"], category_id: 7 },
+"happy-016": { colors: ["#80CBC4","#B4EBE6","#FBF8EF","#FFB433"], category_id: 7 },
+"happy-017": { colors: ["#C7DB9C","#3E432E","#FFF0BD","#A7D129"], category_id: 7 },
+"happy-018": { colors: ["#89AC46","#D3E671","#F8ED8C","#FF8989"], category_id: 7 },
+"happy-019": { colors: ["#000000","#FDAB9E","#616F39","#E50046"], category_id: 7 },
+"happy-020": { colors: ["#626F47","#A4B465","#FFCF50","#FEFAE0"], category_id: 7 },
+
+ "happy-023": { "colors": ["#1A1A1D", "#4E4E50", "#6F2232", "#C3073F"], "category_id": 7 },
+ "happy-024": { "colors": ["#0B132B", "#1C2541", "#3A506B", "#5BC0BE"], "category_id": 7 },
+ "happy-025": { "colors": ["#2E4057", "#1C2833", "#566573", "#99A3A4"], "category_id": 7 },
+ "happy-026": { "colors": ["#3E4E50", "#FEC89A", "#DAB785", "#DAA284"], "category_id": 7 },
+ "happy-027": { "colors": ["#034F84", "#92A8D1", "#BBD0EA", "#F7CAC9"], "category_id": 7 },
+ "happy-028": { "colors": ["#35524A", "#E8C547", "#8CAAA9", "#EFEEEE"], "category_id": 7 },
+ "happy-029": { "colors": ["#283618", "#606C38", "#F2E8CF", "#FFCA3A"], "category_id": 7 },
+ "happy-030": { "colors": ["#0A3D62", "#3C6382", "#82CCDD", "#60A3D9"], "category_id": 7 },
+ "happy-031": { "colors": ["#1B262C", "#0F4C75", "#3282B8", "#BBE1FA"], "category_id": 7 },
+ "happy-032": { "colors": ["#362222", "#F45B69", "#FFC75F", "#D2691E"], "category_id": 7 },
+ "happy-033": { "colors": ["#222831", "#393E46", "#00ADB5", "#EEEEEE"], "category_id": 7 },
+ "happy-034": { "colors": ["#2F3C7E", "#FF1654", "#247BA0", "#70C1B3"], "category_id": 7 },
+ "happy-035": { "colors": ["#3A4750", "#91A6FF", "#F5F7FF", "#FF8A5E"], "category_id": 7 },
+ "happy-036": { "colors": ["#14213D", "#FCA311", "#E5E5E5", "#0F4C5C"], "category_id": 7 },
+ "happy-037": { "colors": ["#1D3557", "#457B9D", "#A8DADC", "#E63946"], "category_id": 7 },
+ "happy-038": { "colors": ["#0D3B66", "#FAF0CA", "#F4D35E", "#EE964B"], "category_id": 7 },
+ "happy-039": { "colors": ["#2F4F4F", "#708090", "#B0C4DE", "#F0F8FF"], "category_id": 7 },
+ "happy-040": { "colors": ["#4B2E83", "#A463F2", "#E0B3FF", "#F3D9FF"], "category_id": 7 },
+ "happy-041": { "colors": ["#20232A", "#61DAFB", "#282C34", "#ABB2BF"], "category_id": 7 },
+ "happy-042": { "colors": ["#0D1B2A", "#1B263B", "#415A77", "#778DA9"], "category_id": 7 },
+ "happy-043": { "colors": ["#12343B", "#3E606F", "#91AA9D", "#CBE4DE"], "category_id": 7 },
+ "happy-044": { "colors": ["#1E1F26", "#3A3F4A", "#6C757D", "#B5B5B5"], "category_id": 7 },
+ "happy-045": { "colors": ["#212121", "#424242", "#616161", "#F5F5F5"], "category_id": 7 },
+ "happy-046": { "colors": ["#2A1A5E", "#6A0572", "#A32064", "#D90368"], "category_id": 7 },
+ "happy-047": { "colors": ["#26282B", "#3B3C36", "#71716E", "#C5C5C3"], "category_id": 7 },
+ "happy-048": { "colors": ["#1C1C1E", "#2C2C2E", "#3A3A3C", "#48484A"], "category_id": 7 },
+ "happy-049": { "colors": ["#112D4E", "#3F72AF", "#DBE2EF", "#F9F7F7"], "category_id": 7 },
+ "happy-050": { "colors": ["#0B132B", "#1C2541", "#3A506B", "#5BC0BE"], "category_id": 7 },
+ "happy-051": { "colors": ["#013A63", "#01497C", "#2A6F97", "#BFD7EA"], "category_id": 7 },
+ "happy-052": { "colors": ["#001219", "#005F73", "#0A9396", "#94D2BD"], "category_id": 7 }
 
 
-{
-    "category": "rainbow",
-    "palettes": [
-        {
-            "id": "rainbow-001",
-            "colors": ["#FE5D26", "#F2C078", "#FAEDCA", "#C1DBB3"]
-        },
-        {
-            "id": "rainbow-002",
-            "colors": ["#6DE1D2", "#FFD63A", "#FFA955", "#F75A5A"]
-        },
-        {
-            "id": "rainbow-003",
-            "colors": ["#B7B1F2", "#FDB7EA", "#FFDCCC", "#FBF3B9"]
-        },
-        {
-            "id": "rainbow-004",
-            "colors": ["#F7CFD8", "#F4F8D3", "#A6F1E0", "#73C7C7"]
-        },
-        {
-            "id": "rainbow-005",
-            "colors": ["#FBDB93", "#BE5B50", "#8A2D3B", "#641B2E"]
-        },
-        {
-            "id": "rainbow-006",
-            "colors": ["#FF8383", "#FFF574", "#A1D6CB", "#A19AD3"]
-        },
-        {
-            "id": "rainbow-007",
-            "colors": ["#FEF3E2", "#F3C623", "#FFB22C", "#FA812F"]
-        },
-        {
-            "id": "rainbow-008",
-            "colors": ["#FCC737", "#F26B0F", "#E73879", "#7E1891"]
-        },
-        {
-            "id": "rainbow-009",
-            "colors": ["#4A102A", "#A4B465", "#C5172E", "#FCF259"]
-        },
-        {
-            "id": "rainbow-010",
-            "colors": ["#F6D6D6", "#F6F7C4", "#A1EEBD", "#7BD3EA"]
-        },
-        {
-            "id": "rainbow-011",
-            "colors": ["#F8F4E1", "#FEBA17", "#74512D", "#4E1F00"]
-        },
-        {
-            "id": "rainbow-012",
-            "colors": ["#B7E0FF", "#FFF5CD", "#FFCFB3", "#E78F81"]
-        },
-        {
-            "id": "rainbow-013",
-            "colors": ["#FFF085", "#FCB454", "#FF9B17", "#F16767"]
-        },
-        {
-            "id": "rainbow-014",
-            "colors": ["#D1E9F6", "#F6EACB", "#F1D3CE", "#EECAD5"]
-        },
-        {
-            "id": "rainbow-015",
-            "colors": ["#210F37", "#4F1C51", "#A55B4B", "#DCA06D"]
-        },
-        {
-            "id": "rainbow-016",
-            "colors": ["#FFE9D0", "#FFFED3", "#BBE9FF", "#B1AFFF"]
-        },
-        {
-            "id": "rainbow-017",
-            "colors": ["#EBE8DB", "#D76C82", "#B03052", "#3D0301"]
-        },
-        {
-            "id": "rainbow-018",
-            "colors": ["#FF76CE", "#FDFFC2", "#94FFD8", "#A3D8FF"]
-        },
-        {
-            "id": "rainbow-019",
-            "colors": ["#FFB200", "#EB5B00", "#D91656", "#640D5F"]
-        },
-        {
-            "id": "rainbow-020",
-            "colors": ["#4793AF", "#FFC470", "#DD5746", "#8B322C"]
-        },
-        {
-            "id": "rainbow-021",
-            "colors": ["#E52020", "#FBA518", "#F9CB43", "#A89C29"]
-        },
-        {
-            "id": "rainbow-022",
-            "colors": ["#59D5E0", "#F5DD61", "#FAA300", "#F4538A"]
-        },
-        {
-            "id": "rainbow-023",
-            "colors": ["#FCE7C8", "#B1C29E", "#FADA7A", "#F0A04B"]
-        },
-        {
-            "id": "rainbow-024",
-            "colors": ["#5E1675", "#EE4266", "#FFD23F", "#337357"]
-        },
-        {
-            "id": "rainbow-025",
-            "colors": ["#09122C", "#872341", "#BE3144", "#E17564"]
-        },
-        {
-            "id": "rainbow-026",
-            "colors": ["#A34343", "#E9C874", "#FBF8DD", "#C0D6E8"]
-        },
-        {
-            "id": "rainbow-027",
-            "colors": ["#FEF9E1", "#E5D0AC", "#A31D1D", "#6D2323"]
-        }, {
-            "id": "rainbow-028",
-            "colors": ["#59D5E0", "#F5DD61", "#FAA300", "#F4538A"]
-        },
-        {
-            "id": "rainbow-029",
-            "colors": ["#C30E59", "#E82561", "#F2AE66", "#E8E7AB"]
-        },
-        {
-            "id": "rainbow-030",
-            "colors": ["#5E1675", "#EE4266", "#FFD23F", "#337357"]
-        },
-        {
-            "id": "rainbow-031",
-            "colors": ["#FFF0DC", "#F0BB78", "#543A14", "#131010"]
-        },
-        {
-            "id": "rainbow-032",
-            "colors": ["#9195F6", "#B7C9F2", "#F9F07A", "#FB88B4"]
-        },
-        {
-            "id": "rainbow-033",
-            "colors": ["#F29F58", "#AB4459", "#441752", "#1B1833"]
-        },
-        {
-            "id": "rainbow-034",
-            "colors": ["#CDFADB", "#F6FDC3", "#FFCF96", "#FF8080"]
-        },
-        {
-            "id": "rainbow-035",
-            "colors": ["#AA5486", "#FC8F54", "#FDE7BB", "#FBF4DB"]
-        },
-        {
-            "id": "rainbow-036",
-            "colors": ["#D04848", "#F3B95F", "#FDE767", "#6895D2"]
-        },
-        {
-            "id": "rainbow-037",
-            "colors": ["#FEF3E2", "#FAB12F", "#FA812F", "#FA4032"]
-        },
-        {
-            "id": "rainbow-038",
-            "colors": ["#7BD3EA", "#A1EEBD", "#F6F7C4", "#F6D6D6"]
-        },
-        {
-            "id": "rainbow-039",
-            "colors": ["#740938", "#AF1740", "#CC2B52", "#DE7C7D"]
-        },
-        {
-            "id": "rainbow-040",
-            "colors": ["#0802A3", "#FF4B91", "#FF7676", "#FFCD4B"]
-        },
-    ]
-},
+ "winter-001": { "colors": ["#3494B7","#A5C4D6","#ACCCD8","#FFFAF4"], "category_id": 7 },
+ "winter-002": { "colors": ["#A1DCFA","#DAEAF0","#F7F9F8","#BBBABC"], "category_id": 7 },
+ "winter-003": { "colors": ["#4BA4C0","#71A5BA","#FFF299","#7672AA"], "category_id": 7 },
+ "winter-004": { "colors": ["#90A8D5","#B8C6E0","#DCE2F2","#FFF8E8"], "category_id": 7 },
+ "winter-005": { "colors": ["#009ACD","#FFFFFF","#66CDAA","#A6A6A6"], "category_id": 7 },
+ "winter-006": { "colors": ["#0066CC","#CC0000","#00CC66","#FFFFFF"], "category_id": 7 },
+ "winter-007": { "colors": ["#87CEEB","#4682B4","#B0C4DE","#F0F8FF"], "category_id": 7 },
+ "winter-008": { "colors": ["#70A0AF","#E0E8F0","#526A7E","#BFB8D2"], "category_id": 7 },
+ "winter-009": { "colors": ["#7B8A99","#AAB3BF","#D3D8E2","#E9EDF2"], "category_id": 7 },
+ "winter-010": { "colors": ["#3B4E6B","#68A7D3","#F9EBBB","#F26419"], "category_id": 7 },
+ "winter-011": { "colors": ["#FF3333","#66CC33","#FFCC66","#FFFFFF"], "category_id": 7 },
+ "winter-012": { "colors": ["#1A2536","#405B6E","#B8C9D3","#F0E5C9"], "category_id": 7 },
+ "winter-013": { "colors": ["#BFA899","#99BFA8","#A899BF","#E0E4E9"], "category_id": 7 },
+ "winter-014": { "colors": ["#D8BDA3","#EAD4BF","#5C504B","#B7A6A6"], "category_id": 7 },
+ "winter-015": { "colors": ["#8A9BB1","#B4BCC6","#E0E4E9","#BFCAD6"], "category_id": 7 },
+ "winter-016": { "colors": ["#2C3E50","#67C7EB","#D0EFFF","#F39C12"], "category_id": 7 },
+ "winter-017": { "colors": ["#C5E2FF","#64A8DC","#F5D275","#EC883E"], "category_id": 7 },
+ "winter-018": { "colors": ["#CDA9FD","#9C85F8","#535DF3","#FFFFFF"], "category_id": 7 },
+ "winter-019": { "colors": ["#DFE9ED","#D4472D","#9F0900","#FFFFFF"], "category_id": 7 },
+ "winter-020": { "colors": ["#DAE1E7","#82B8DA","#75787F","#3C3B40"], "category_id": 7 },
+ "winter-021": { "colors": ["#DADBDD","#9C9F98","#484E4A","#2C2F26"], "category_id": 7 },
+ "winter-022": { "colors": ["#4975B0","#CA510D","#1B2D51","#FFFFFF"], "category_id": 7 },
+ "winter-023": { "colors": ["#A1B8ED","#F2C4CB","#7094FF","#FFFFFF"], "category_id": 7 },
+ "winter-024": { "colors": ["#6B7897","#B4BCD0","#EEE3E3","#EAC6D3"], "category_id": 7 },
+ "winter-025": { "colors": ["#232847","#496688","#FBDFD0","#EFB5AF"], "category_id": 7 },
+ "winter-026": { "colors": ["#1E3150","#3A6A97","#64A3C3","#A7CEDB"], "category_id": 7 },
+ "winter-027": { "colors": ["#062C49","#1B4576","#95AFC4","#27A4AE"], "category_id": 7 },
+ "winter-028": { "colors": ["#222549","#49588B","#917B91","#C8A19F"], "category_id": 7 },
+ "winter-029": { "colors": ["#3A5576","#6882A3","#8BA2BF","#DBE9F5"], "category_id": 7 },
+ "winter-030": { "colors": ["#285681","#4C7AA5","#A7CAED","#EBCD ED"], "category_id": 7 },
 
-{
-    "category": "christmas",
-    "palettes": [
-        {
-            "id": "christmas-001",
-            "colors": ["#347433", "#FFC107", "#FF6F3C", "#B22222"]
-        },
-        {
-            "id": "christmas-002",
-            "colors": ["#511D43", "#901E3E", "#DC2525", "#9BC09C"]
-        },
-        {
-            "id": "christmas-003",
-            "colors": ["#B7B1F2", "#FDB7EA", "#FFDCCC", "#FBF3B9"]
-        },
-        {
-            "id": "christmas-004",
-            "colors": ["#FF3F33", "#FFE6E1", "#075B5E", "#9FC87E"]
-        },
-        {
-            "id": "christmas-005",
-            "colors": ["#FBDB93", "#BE5B50", "#8A2D3B", "#641B2E"]
-        },
-        {
-            "id": "christmas-006",
-            "colors": ["#EAEBD0", "#DA6C6C", "#CD5656", "#AF3E3E"]
-        },
-        {
-            "id": "christmas-007",
-            "colors": ["#FEF3E2", "#F3C623", "#FFB22C", "#FA812F"]
-        },
-        {
-            "id": "christmas-008",
-            "colors": ["#E55050", "#732255", "#B2C6D5", "#E7F2E4"]
-        },
-        {
-            "id": "christmas-009",
-            "colors": ["#4A102A", "#A4B465", "#C5172E", "#FCF259"]
-        },
-        {
-            "id": "christmas-010",
-            "colors": ["#A62C2C", "#E83F25", "#EA7300", "#D3CA79"]
-        },
-        {
-            "id": "christmas-011",
-            "colors": ["#F8F4E1", "#FEBA17", "#74512D", "#4E1F00"]
-        },
-        {
-            "id": "christmas-012",
-            "colors": ["#D84040", "#A31D1D", "#ECDCBF", "#F8F2DE"]
-        },
-        {
-            "id": "christmas-013",
-            "colors": ["#FFF085", "#FCB454", "#FF9B17", "#F16767"]
-        },
-        {
-            "id": "christmas-014",
-            "colors": ["#690B22", "#E07A5F", "#F1E3D3", "#1B4D3E"]
-        },
-        {
-            "id": "christmas-015",
-            "colors": ["#210F37", "#4F1C51", "#A55B4B", "#DCA06D"]
-        },
-        {
-            "id": "christmas-016",
-            "colors": ["#FEF9E1", "#A31D1D", "#E5D0AC", "#6D2323"]
-        },
-        {
-            "id": "christmas-017",
-            "colors": ["#EBE8DB", "#D76C82", "#B03052", "#3D0301"]
-        },
-        {
-            "id": "christmas-018",
-            "colors": ["#5CB338", "#ECE852", "#FFC145", "#FB4141"]
-        },
-        {
-            "id": "christmas-019",
-            "colors": ["#FFB200", "#EB5B00", "#D91656", "#640D5F"]
-        },
-        {
-            "id": "christmas-020",
-            "colors": ["#1F4529", "#47663B", "#E8ECD7", "#EED3B1"]
-        },
-        {
-            "id": "christmas-021",
-            "colors": ["#E52020", "#FBA518", "#F9CB43", "#A89C29"]
-        },
-        {
-            "id": "christmas-022",
-            "colors": ["#3C552D", "#CA7373", "#D7B26D", "#EEE2B5"]
-        },
-        {
-            "id": "christmas-023",
-            "colors": ["#FCE7C8", "#B1C29E", "#FADA7A", "#F0A04B"]
-        },
-        {
-            "id": "christmas-024",
-            "colors": ["#384B70", "#507687", "#FCFAEE", "#B8001F"]
-        },
-        {
-            "id": "christmas-025",
-            "colors": ["#09122C", "#872341", "#BE3144", "#E17564"]
-        },
-        {
-            "id": "christmas-026",
-            "colors": ["#CD5C08", "#FFF5E4", "#C1D8C3", "#6A9C89"]
-        },
-        {
-            "id": "christmas-027",
-            "colors": ["#FEF9E1", "#E5D0AC", "#A31D1D", "#6D2323"]
-        }, {
-            "id": "christmas-028",
-            "colors": ["#A02334", "#FFAD60", "#FFEEAD", "#96CEB4"]
-        },
-        {
-            "id": "christmas-029",
-            "colors": ["#C30E59", "#E82561", "#F2AE66", "#E8E7AB"]
-        },
-        {
-            "id": "christmas-030",
-            "colors": ["#FFF5E1", "#FF6969", "#C80036", "#0C1844"]
-        },
-        {
-            "id": "christmas-031",
-            "colors": ["#FFF0DC", "#F0BB78", "#543A14", "#131010"]
-        },
-        {
-            "id": "christmas-032",
-            "colors": ["#365E32", "#81A263", "#E7D37F", "#FD9B63"]
-        },
-        {
-            "id": "christmas-033",
-            "colors": ["#F29F58", "#AB4459", "#441752", "#1B1833"]
-        },
-        {
-            "id": "christmas-034",
-            "colors": ["#FF0000", "#FFA27F", "#FFE8C5", "#97BE5A"]
-        },
-        {
-            "id": "christmas-035",
-            "colors": ["#AA5486", "#FC8F54", "#FDE7BB", "#FBF4DB"]
-        },
-        {
-            "id": "christmas-036",
-            "colors": ["#799351", "#A1DD70", "#F6EEC9", "#EE4E4E"]
-        },
-        {
-            "id": "christmas-037",
-            "colors": ["#FEF3E2", "#FAB12F", "#FA812F", "#FA4032"]
-        },
-        {
-            "id": "christmas-038",
-            "colors": ["#5E1675", "#EE4266", "#FFD23F", "#337357"]
-        },
-        {
-            "id": "christmas-039",
-            "colors": ["#740938", "#AF1740", "#CC2B52", "#DE7C7D"]
-        },
-        {
-            "id": "christmas-040",
-            "colors": ["#43766C", "#F8FAE5", "#B19470", "#76453B"]
-        },
-    ]
-}
-]
+ "winter-031": { "colors": ["#3A498D","#506B9B","#76A1B2","#C8D4E4"], "category_id": 7 },
+ "winter-032": { "colors": ["#B1C8D8","#76839F","#A6BFC3","#C9D8CD"], "category_id": 7 },
+ "winter-033": { "colors": ["#CCD8E9","#9C8AAC","#F8CECA","#94D2C9"], "category_id": 7 },
+ "winter-034": { "colors": ["#5B0BBF","#0F52BA","#007D3C","#BBBBBB"], "category_id": 7 },
+ "winter-035": { "colors": ["#B0E0E6","#A9C6D9","#6C7B8A","#2C3E50"], "category_id": 7 },
+ "winter-036": { "colors": ["#182451","#7992E2","#BEB1E7","#47507A"], "category_id": 7 },
+ "winter-037": { "colors": ["#11243D","#254767","#749FC8","#418094"], "category_id": 7 } },
+ "winter-038": { "colors": ["#062C49","#1B4576","#95AFC4","#03757C"], "category_id": 7 },
+ "winter-039": { "colors": ["#1E3150","#3A6A97","#64A3C3","#DB942D"], "category_id": 7 },
+ "winter-040": { "colors": ["#222549","#49588B","#917B91","#F5C981"], "category_id": 7 },
+ "winter-041": { "colors": ["#4B6A87","#6C8DA7","#8AAAC1","#D7EAF2"], "category_id": 7 },
+ "winter-042": { "colors": ["#062C49","#1B4576","#95AFC4","#27A4AE"], "category_id": 7 },
+ "winter-043": { "colors": ["#285681","#4C7AA5","#A7CAED","#EBCD ED"], "category_id": 7 },
+ "winter-044": { "colors": ["#222549","#49588B","#917B91","#C8A19F"], "category_id": 7 },
+ "winter-045": { "colors": ["#1E154D","#4D2A47","#8C4F48","#D88C4E"], "category_id": 7 },
+ "winter-046": { "colors": ["#021B43","#0D3468","#205589","#4FA8C9"], "category_id": 7 },
+ "winter-047": { "colors": ["#15182D","#41446A","#91B6E9","#5C78B7"], "category_id": 7 },
+ "winter-048": { "colors": ["#133A63","#01497C","#2A6F97","#BFD7EA"], "category_id": 7 },
+ "winter-049": { "colors": ["#CCD8E9","#B0C4C3","#94A7AC","#5B7077"], "category_id": 7 }, 
+ "winter-050": { "colors": ["#748C92","#BCCCD4","#3C4C54","#E2C3D6"], "category_id": 7 },
+
+
+ 
+  "wedding-001": { "colors": ["#FEC7C2","#FEE2E0","#D6E2AD","#C1CEFF"], "category_id": 7 },
+  "wedding-002": { "colors": ["#62B5CB","#F2E8E4","#FCFDF8","#F8C5CA"], "category_id": 7 },
+  "wedding-003": { "colors": ["#9C48AA","#AE7DD3","#E0E6EE","#E1BFD7"], "category_id": 7 },
+  "wedding-004": { "colors": ["#A2D4F7","#A2E5DE","#F8FAEB","#FBDCC9"], "category_id": 7 },
+  "wedding-005": { "colors": ["#5B3039","#B4828C","#CE8FA0","#F1E9DE"], "category_id": 7 },
+  "wedding-006": { "colors": ["#CBB5D3","#E8D4E0","#FBFBFD","#E1E7EA"], "category_id": 7 },
+  "wedding-007": { "colors": ["#C51941","#02495E","#518BAB","#CCDAE6"], "category_id": 7 },
+  "wedding-008": { "colors": ["#8BA1C0","#B5B4C7","#C3C99B","#EFBFA7"], "category_id": 7 },
+  "wedding-009": { "colors": ["#71856C","#98AB87","#FEFAEE","#FA88B0"], "category_id": 7 },
+  "wedding-010": { "colors": ["#BFB1CF","#F2B2B2","#FCE5DD","#BCB99A"], "category_id": 7 },
+  "wedding-011": { "colors": ["#D63776","#ED205A","#FF5489","#FF87C4"], "category_id": 7 },
+  "wedding-012": { "colors": ["#34675C","#8DAA9D","#F5F0E1","#E2CFC3"], "category_id": 7 },
+  "wedding-013": { "colors": ["#E2B5AA","#F4C9C0","#F4DADA","#E2CAA0"], "category_id": 7 },
+  "wedding-014": { "colors": ["#FBD7E1","#FDF7CB","#FDFFFF","#C2F9DC"], "category_id": 7 },
+  "wedding-015": { "colors": ["#841320","#F1C9D8","#FFFFFF","#ECC058"], "category_id": 7 },
+  "wedding-016": { "colors": ["#E41F67","#F9EBDF","#ECC058","#841320"], "category_id": 7 },
+  "wedding-017": { "colors": ["#B20103","#96A007","#F4CA5B","#58A8DB"], "category_id": 7 },
+  "wedding-018": { "colors": ["#325C39","#9C9549","#DBAA46","#FF4A4A"], "category_id": 7 },
+  "wedding-019": { "colors": ["#121969","#102F9F","#5B7FC8","#DFA927"], "category_id": 7 },
+  "wedding-020": { "colors": ["#E60202","#E4B328","#F7F1D5","#EB6B95"], "category_id": 7 },
+  "wedding-021": { "colors": ["#D9B070","#EED195","#F4EBC6","#BABCDA"], "category_id": 7 },
+  "wedding-022": { "colors": ["#BABABA","#FAD7D5","#F8B67C","#94AC78"], "category_id": 7 },
+  "wedding-023": { "colors": ["#769293","#CCD8E9","#9C8AAC","#F8CECA"], "category_id": 7 },
+  "wedding-024": { "colors": ["#94D2C9","#B4BCC6","#8A9BB1","#E0E4E9"], "category_id": 7 },
+  "wedding-025": { "colors": ["#FEE2E0","#C6ADFE","#9C48AA","#E0E6EE"], "category_id": 7 },
+  "wedding-026": { "colors": ["#395433","#B7B783","#DA5741","#E4C091"], "category_id": 7 },
+  "wedding-027": { "colors": ["#A2D4F7","#FDD3B8","#A2E5DE","#F8FAEB"], "category_id": 7 },
+  "wedding-028": { "colors": ["#62B5CB","#EAB2BD","#FCFDF8","#F2E8E4"], "category_id": 7 },
+  "wedding-029": { "colors": ["#9C48AA","#E0E6EE","#E1BFD7","#D799BE"], "category_id": 7 },
+  "wedding-030": { "colors": ["#02495E","#C51941","#518BAB","#DAE6EE"], "category_id": 7 },
+  "wedding-031": { "colors": ["#8BA1C0","#EFBFA7","#C3C99B","#B5B4C7"], "category_id": 7 },
+  "wedding-032": { "colors": ["#71856C","#98AB87","#B90438","#FEFAEE"], "category_id": 7 },
+  "wedding-033": { "colors": ["#BFB1CF","#FCE5DD","#F2B2B2","#BCB99A"], "category_id": 7 },
+  "wedding-034": { "colors": ["#D63776","#ED205A","#FFF3F7","#FF87C4"], "category_id": 7 },
+  "wedding-035": { "colors": ["#325C39","#DBAA46","#F4EBC6","#FF4A4A"], "category_id": 7 },
+  "wedding-036": { "colors": ["#B20103","#F4CA5B","#96A007","#58A8DB"], "category_id": 7 },
+  "wedding-037": { "colors": ["#841320","#F9EBDF","#ECC058","#E41F67"], "category_id": 7 },
+  "wedding-038": { "colors": ["#E2B5AA","#F4DADA","#E2CAA0","#FBF1EF"], "category_id": 7 },
+  "wedding-039": { "colors": ["#FBD7E1","#FDFFFF","#C2F9DC","#AAA1C4"], "category_id": 7 },
+  "wedding-040": { "colors": ["#121969","#5B7FC8","#DFA927","#87CEEB"], "category_id": 7 },
+  "wedding-041": { "colors": ["#E60202","#E4B328","#EB6B95","#7D1FA4"], "category_id": 7 },
+  "wedding-042": { "colors": ["#D9B070","#F4EBC6","#BABCDA","#ECE6D6"], "category_id": 7 },
+  "wedding-043": { "colors": ["#BABABA","#94AC78","#FAD7D5","#F8B67C"], "category_id": 7 },
+  "wedding-044": { "colors": ["#769293","#CCD8E9","#F8CECA","#B4BCC6"], "category_id": 7 },
+  "wedding-045": { "colors": ["#325C39","#DBAA46","#FF4A4A","#9C9549"], "category_id": 7 },
+  "wedding-046": { "colors": ["#B20103","#96A007","#58A8DB","#F4CA5B"], "category_id": 7 },
+  "wedding-047": { "colors": ["#841320","#ECC058","#F1C9D8","#FFFFFF"], "category_id": 7 },
+  "wedding-048": { "colors": ["#E2B5AA","#F4C9C0","#FBF1EF","#C2F9DC"], "category_id": 7 },
+  "wedding-049": { "colors": ["#121969","#102F9F","#DFA927","#5B7FC8"], "category_id": 7 },
+  "wedding-050": { "colors": ["#E60202","#EB6B95","#E4B328","#F7F1D5"], "category_id": 7 }
 
