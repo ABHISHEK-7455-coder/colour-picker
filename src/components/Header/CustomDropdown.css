@@ -43,10 +43,30 @@ h5 {
     padding: 8px 12px;
     margin-left: 10px;
     border-radius: 6px;
-    font-size: 15px;
+    font-size: 18px;
     transition: background 0.2s ease;
     position: relative;
 }
+.dropdown-menu>#HistoryBtn{
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.dropdown-menu>#HistoryBtn:hover{
+  text-decoration:underline 2px #435849;
+}
+.dropdown-itemP{
+  margin: 0;
+  font-size: 12px;
+  color: rgb(184, 184, 184);
+  margin-left: 10px;
+}
+
+
 
 
 
@@ -67,4 +87,3 @@ h5 {
     top: 30px;
   }
 }
-
