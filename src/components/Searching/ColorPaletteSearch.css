@@ -37,7 +37,7 @@
  background-color: black;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
@@ -118,6 +118,19 @@
   color: #7f8c8d;
 }
 
+@media (max-width: 768px) {
+  .search-controls {
+    flex-direction: column;
+  }
+  
+  .search-section {
+    flex-direction: column;
+  }
+  
+  .search-section button {
+    width: 100%;
+  }
+}
 .category-buttons {
   display: flex;
   flex-direction: column;
@@ -211,8 +224,7 @@
     opacity: 1;
 }
 
-
-@media (max-width: 390px) {
+@media (max-width: 490px) {
   .color-palette-search h1, p {
     width: 100%;
     margin-top: -20px;

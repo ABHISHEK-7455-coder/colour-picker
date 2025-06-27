@@ -36,9 +36,9 @@
 .slider:hover {
     opacity: 1;
 }
-.color-display{
+/* .color-display{
     width: 80vw;
-}
+} */
 
 .color-display div {
     position: relative;
@@ -49,6 +49,10 @@
 }
 .pickerAndColor{
     display: flex;
+    /* margin: auto; */
+    /* width: 90vw; */
+    justify-content: center;
+    gap: 30px;
 }
 .selected-color button{
     margin-left: 10px;
@@ -64,6 +68,7 @@
     cursor: pointer;
     transition: transform 0.3s ease, background 0.3s ease;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: none;
 
 }
 .mode-selector label{
@@ -83,12 +88,19 @@
     height: 7px;
     /* margin-top: 20px; */
 }
- 
+ .react-colorful__hue {
+    position: relative;
+    height: 7px;
+}
 .react-colorful__alpha, .react-colorful__hue {
     position: relative;
     height: 7px;
 }
-
+.react-colorful__alpha, 
+.react-colorful__hue {
+    position: relative;
+    height: 7px; /* Changed from 24px to 7px */
+}
 .color-picker-container h1{
     color: white;
     font-size: 50px;
@@ -104,7 +116,7 @@
 }
 
 .color-picker-dropdown {
-    margin-left: 15vw;
+    /* margin-left: 15vw; */
     margin-bottom: 10vh;
     /* Styles for the dropdown section */
 }
@@ -115,9 +127,7 @@
 
 .selected-color {
     /* Styles for the selected color display */
-    margin-top: 10px;
-    display: flex;
-    width: 100%;
+    margin-top: 20px;
 }
 
 .color-display {
@@ -147,7 +157,7 @@
 }
 
 @media (min-width: 600px) {
-  .color-slider {
+  /* .color-slider {
     height: 180px;
     margin: 15px 0;
   }
@@ -157,13 +167,13 @@
   .selected-color button {
     font-size: 16px;
     padding: 15px 24px;
-  }
-  .pickerAndColor {
+  } */
+  /* .pickerAndColor {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-  }
-  .react-colorful {
+  } */
+  /* .react-colorful {
     max-width: 337px;
   }
   .color-display {
@@ -176,11 +186,11 @@
   .hovered-color-label {
     font-size: 14px;
     top: 250px;
-  }
+  } */
 }
 
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 490px) {
   .color-slider {
     height: 200px;
   }
@@ -194,7 +204,9 @@
   }
   .pickerAndColor {
     width: 100%;
-    display: block;
+    /* display: block; */
+    flex-direction: column-reverse;
+    margin-bottom: 10vh;
   }
   .react-colorful {
     width: 100%;
@@ -205,13 +217,15 @@
     width: 500px;
   }
   .color-variation {
-    height: 300px;
-    width: 60px;
-  }
+    height: 40px;
+     width: 80vw;
+   margin: auto;
+      }
+
   .hovered-color-label {
-    font-size: 16px;
-    top: 310px;
-    width: auto;
+  
+        font-size: 16px;
+        top: -6px;
   }
 
   .selected-color {
@@ -222,6 +236,8 @@
   .color-display {
     width: 100%;
     margin-top: -15px;
+    flex-direction: column-reverse;
+        margin: auto;
   }
 
   .color-picker-dropdown {

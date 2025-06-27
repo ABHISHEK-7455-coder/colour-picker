@@ -119,13 +119,14 @@
 
 // export default ColorPickerButton;
 import { useState } from "react";
-import Footer from '../Footer/Footer';
+
 import {
     HexColorPicker,
     RgbColorPicker,
     HslColorPicker,
 } from "react-colorful";
 import './ColorPickerButton.css';
+import BottomFooter from "../Footer/BottomFooter";
 
 const ColorPickerButton = () => {
     const [isOpen, setIsOpen] = useState(true);
@@ -218,7 +219,7 @@ const adjustColorBrightness = (hex, percent) => {
                         </div>
                         {renderPicker()}
                         <div className="selected-color">
-                            <div>Selected:- {color}</div>
+                            <strong>Selected:</strong> {color}
                             <button onClick={() => handleColorCopy(color) }>Copy</button>
                         </div>
                     </div>
@@ -240,7 +241,7 @@ const adjustColorBrightness = (hex, percent) => {
                     ))}
                 </div>
             </div>
-            <Footer/>
+            <BottomFooter/>
         </div>
     );
 };
