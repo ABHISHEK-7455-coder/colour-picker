@@ -1,5 +1,6 @@
 
- import { useState, useEffect } from 'react';
+ import { useState, useEffect, useRef } from 'react';
+ import html2canvas from 'html2canvas';
 import './GradientMaker.css'; // Import the CSS file
 
 const GradientMaker = () => {
@@ -11,7 +12,17 @@ const GradientMaker = () => {
     const [angle, setAngle] = useState(90);
     const [cssOutput, setCssOutput] = useState('');
     const [newColor, setNewColor] = useState('#000000'); // State for new color input
+    const previewRef = useRef(null);
 
+    useEffect(() => {
+    const stored = JSON.parse(localStorage.getItem('gradientPresets') || '[]');
+    if (stored.length) {
+      const last = stored[stored.length - 1];
+      setColorStops(last.colorStops);
+      setGradientType(last.gradientType);
+      setAngle(last.angle);
+    }
+  }, []);
     useEffect(() => {
         updateGradient();
     }, [colorStops, gradientType, angle]);
@@ -38,6 +49,23 @@ const GradientMaker = () => {
         setCssOutput(`background: ${gradientStr};`);
     };
 
+    const downloadPNG = async () => {
+    if (!previewRef.current) return;
+    const canvas = await html2canvas(previewRef.current);
+    const data = canvas.toDataURL('image/png', 1.0);
+    const link = document.createElement('a');
+    link.href = data;
+    link.download = 'gradient.png';
+    link.click();
+  };
+
+  const savePreset = () => {
+    const preset = { colorStops, gradientType, angle };
+    const existing = JSON.parse(localStorage.getItem('gradientPresets') || '[]');
+    localStorage.setItem('gradientPresets', JSON.stringify([...existing, preset]));
+    alert('Preset saved!');
+  };
+
     const addColorStop = () => {
         const newPosition = Math.round(colorStops[colorStops.length - 1].position / 2);
         const newId = Date.now();
@@ -59,9 +87,8 @@ const GradientMaker = () => {
     };
 
     const copyToClipboard = () => {
-        navigator.clipboard.writeText(cssOutput).then(() => {
-            alert('CSS Copied!');
-        });
+        navigator.clipboard.writeText(cssOutput)
+        
     };
 
     const applyPreset = (gradient) => {
@@ -99,7 +126,11 @@ const GradientMaker = () => {
 
             <div className="grid">
                 <div className="preview-section">
-                    <div className="gradient-preview" style={{ background: `linear-gradient(${angle}deg, ${colorStops.map(s => `${s.color} ${s.position}%`).join(', ')})` }}></div>
+                    <div className="gradient-preview" style={{ background: gradientType === 'linear'
+        ? `linear-gradient(${angle}deg, ${colorStops.map(s => `${s.color} ${s.position}%`).join(', ')})`
+        : gradientType === 'radial'
+        ? `radial-gradient(circle, ${colorStops.map(s => `${s.color} ${s.position}%`).join(', ')})`
+        : `conic-gradient(from ${angle}deg, ${colorStops.map(s => `${s.color} ${s.position}%`).join(', ')})` }}></div>
 
                     <div className="controls">
                         <div className="gradient-type">
@@ -111,13 +142,15 @@ const GradientMaker = () => {
                             </div>
                         </div>
 
-                        <div className="direction-controls">
-                            <h3 className="section-title">Direction</h3>
-                            <div className="angle-control">
-                                <input type="range" min="0" max="360" value={angle} onChange={(e) => setAngle(parseInt(e.target.value))} />
-                                <span className="angle-value">{angle}°</span>
-                            </div>
-                        </div>
+                        {gradientType === 'linear' && (
+    <div className="direction-controls">
+      <h3 className="section-title">Direction</h3>
+      <div className="angle-control">
+        <input type="range" min="0" max="360" value={angle} onChange={(e) => setAngle(parseInt(e.target.value))} />
+        <span className="angle-value">{angle}°</span>
+      </div>
+    </div>
+  )}
                     </div>
 
                     <div className="color-stops">
@@ -180,8 +213,8 @@ const GradientMaker = () => {
 
                     <div className="export-options">
                         <h3 className="section-title">Export</h3>
-                        <button className="export-btn">Download PNG</button>
-                        <button className="export-btn">Save as Preset</button>
+                        <button onClick={downloadPNG} className="export-btn">Download PNG</button>
+        <button onClick={savePreset} className="export-btn">Save as Preset</button>
                     </div>
                 </div>
             </div>

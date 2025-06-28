@@ -121,7 +121,7 @@ const CustomDropdown = ({  history }) => {
   return (
     <div className="dropdown" ref={dropdownRef}>
       <button onClick={toggleDropdown} className="dropdown-toggle">
-        Tools
+        Tools ▾
       </button>
       {isOpen && (
         <div className="dropdown-menu">

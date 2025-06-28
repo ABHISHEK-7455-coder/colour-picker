@@ -251,6 +251,7 @@
 //   );
 // }
 
+import { useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import ColorThief from 'colorthief';
 import './ColourExtractor.css';
@@ -273,10 +274,13 @@ function rgbToHex(r, g, b) {
 const dummyImage =
   'https://images.unsplash.com/photo-1699043787902-84a29a6a286a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJlYXV0aWZ1bCUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D';
 
-export default function ColorExtractor({ history, user, setHistory, initialItem }) {
+export default function ColorExtractor({ history, user, setHistory }) {
+  
   const [imageSrc, setImageSrc] = useState(initialItem?.src || dummyImage);
   const [colors, setColors] = useState(initialItem?.palette || []);
   const navigate = useNavigate();
+  const { state: initialItem } = useLocation(); // incoming from HistoryPage
+
 
   useEffect(() => {
     if (initialItem) {
