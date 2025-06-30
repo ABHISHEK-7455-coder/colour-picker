@@ -1,10 +1,10 @@
-import ColorExtractor from '../ColorExtractor/ColorExtractor';
+import ColourExtractor from '../ColorExtractor/ColourExtractor';
 
 function Upload() {
   return (
     <div>
       <h2 style={{ textAlign: 'center', margin: '20px 0' }}>Upload Image & Extract Colors</h2>
-      <ColorExtractor />
+      <ColourExtractor />
 
     </div>
   
