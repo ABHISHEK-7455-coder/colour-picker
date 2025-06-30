@@ -404,6 +404,9 @@ function rgbToHex(r, g, b) {
   );
 }
 
+const dummyImage =
+   'https://images.unsplash.com/photo-1699043787902-84a29a6a286a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJlYXV0aWZ1bCUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D';
+
 export default function ColorExtractor() {
   const navigate = useNavigate();
   const { state: initialItem } = useLocation();
@@ -413,7 +416,7 @@ export default function ColorExtractor() {
     return saved ? JSON.parse(saved) : [];
   });
 
-  const [imageSrc, setImageSrc] = useState(initialItem?.src || '');
+  const [imageSrc, setImageSrc] = useState(initialItem?.src || dummyImage);
   const [colors, setColors] = useState(initialItem?.palette || []);
 
   // Only load history once on mount
