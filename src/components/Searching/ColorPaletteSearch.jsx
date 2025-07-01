@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo, useRef } from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import { colorNameToCode } from 'color-name-to-code';
 import './ColorPaletteSearch.css';
 import Loader from './Loader'; // Ensure Loader.js + Loader.css are correctly set up
 import BottomFooter from '../Footer/BottomFooter';
@@ -10,6 +11,7 @@ const ColorPaletteSearch = ({ colorData }) => {
   const [selectedCategory, setSelectedCategory] = useState('');
   const [palettes, setPalettes] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+   const [tooltip, setTooltip] = useState({ visible: false, color: '' });
 
   const allPalettes = useMemo(
     () =>
@@ -28,6 +30,12 @@ const ColorPaletteSearch = ({ colorData }) => {
 
       setTimeout(() => {
         const q = query.toLowerCase().trim();
+         let hexFromName = '';
+        try {
+          if (q && !q.startsWith('#') && isNaN(parseInt(q,16))) {
+            hexFromName = colorNameToCode(q, { lowercase: true });
+          }
+        } catch {}
         const results = allPalettes.filter((p) => {
           const matchQuery =
             !q ||
@@ -47,6 +55,23 @@ const ColorPaletteSearch = ({ colorData }) => {
   useEffect(() => {
     debouncedSearch(searchQuery, selectedCategory);
   }, [searchQuery, selectedCategory, debouncedSearch]);
+
+  // Manual search submission
+  const handleSearch = (e) => {
+    e.preventDefault();
+    debouncedSearch(searchQuery, selectedCategory);
+  };
+
+  const handleCategoryChange = (e) => {
+    setSelectedCategory(e.target.value);
+  };
+
+  const copyToClipboard = (color) => {
+    navigator.clipboard.writeText(color).then(() => {
+      setTooltip({ visible: true, color });
+      setTimeout(() => setTooltip({ visible: false, color: '' }), 1500);
+    });
+  };
 
   return (
     <>
@@ -74,27 +99,34 @@ const ColorPaletteSearch = ({ colorData }) => {
         ) : (
           <div className="results-grid">
             {palettes.length > 0 ? (
-              palettes.map((p) => (
-                <div key={p.id} className="palette-card">
+              palettes.map((palette) => (
+                <div key={palette.id} className="palette-card">
                   <div className="palette-colors">
-                    {p.colors.map((color, idx) => (
+                    {palette.colors.map((color, index) => (
                       <div
-                        key={idx}
+                        key={index}
                         className="color-box"
                         style={{ backgroundColor: color }}
-                        onClick={() => navigator.clipboard.writeText(color)}
+                        title={color}
+                        aria-label={`Color ${color}`}
+                        onClick={() => copyToClipboard(color)}
+                        onMouseEnter={() => setTooltip({ visible: true, color })}
+                        onMouseLeave={() => setTooltip({ visible: false, color: '' })}
                       >
-                        <span className="hexTooltip">{color}</span>
+                        <div className={`hexTooltip ${tooltip.visible && tooltip.color === color ? 'visible' : ''}`}>
+                          {color}
+                        </div>
                       </div>
                     ))}
                   </div>
+                  {/* <div className="palette-info">
+                    <p className="palette-category">{palette.category}</p>
+                  </div> */}
                 </div>
               ))
             ) : (
               <p className="no-results">
-                {searchQuery
-                  ? `No palettes found for "${searchQuery}"`
-                  : 'No palettes found'}
+                {searchQuery ? `No palettes found for "${searchQuery}"` : 'No palettes found'}
               </p>
             )}
           </div>
