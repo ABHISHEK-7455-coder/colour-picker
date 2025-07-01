@@ -242,6 +242,7 @@ const GradientMaker = () => {
 
   const previewRef = useRef(null);
   const preRef = useRef(null);
+  let localText = cssOutput;
 
   // 💡 FIX 1: Ensure updateGradient is declared before useEffect
   const updateGradient = () => {
@@ -271,25 +272,31 @@ const GradientMaker = () => {
   }, [colorStops, gradientType, angle]);
 
   // 💡 FIX 2: Make <pre> uncontrolled and sync once
-  useEffect(() => {
-    if (preRef.current) {
-      preRef.current.textContent = cssOutput;
-    }
-  }, []);
+ useEffect(() => {
+  if (
+    preRef.current &&
+    preRef.current.textContent !== cssOutput
+  ) {
+    preRef.current.textContent = cssOutput;
+  }
+}, [cssOutput]);
+
 
   
   const onPreInput = () => {
-    const cssText = preRef.current.textContent;
-    setCssOutput(cssText);
-    if (previewRef.current) previewRef.current.style.cssText = cssText;
-  };
+  const text = preRef.current.textContent;
+  localText = text;          // update buffer
+  setCssOutput(text);        // optionally sync with state
+  previewRef.current.style.cssText = text;
+};
 
   // Rest of your handlers and component as-is
   const downloadPNG = async () => {
     if (!previewRef.current) return;
     const canvas = await html2canvas(previewRef.current);
+     const data = canvas.toDataURL('image/png');
     const link = document.createElement('a');
-    link.href = canvas.toDataURL('image/png');
+    link.href = data;
     link.download = 'gradient.png';
     link.click();
   };
@@ -428,14 +435,11 @@ const GradientMaker = () => {
             <h3 className="section-title">CSS Code</h3>
             <pre
               ref={preRef}
-              contentEditable
+              contentEditable = "true"
               suppressContentEditableWarning
-              onInput={() => {
-    const cssText = preRef.current.textContent;
-    setCssOutput(cssText);
-    previewRef.current.style.cssText = cssText;
-  }}
+              onInput={onPreInput}
             >{cssOutput}</pre>
+
             <button onClick={copyToClipboard} className="copy-btn">Copy CSS</button>
           </div>
 
