@@ -251,11 +251,10 @@
 //   );
 // }
 
-// import { useLocation } from 'react-router-dom';
 // import { useState, useEffect } from 'react';
 // import ColorThief from 'colorthief';
-// import './ColourExtractor.css';
-// import PaletteGrid from '../Palettes/PaletteGrid';
+// import './ColorExtractor.css';
+// import PaletteGrid from '../Palattes/PaletteGrid';
 // import BottomFooter from '../Footer/BottomFooter';
 // import { useNavigate } from 'react-router-dom';
 
@@ -275,12 +274,9 @@
 //   'https://images.unsplash.com/photo-1699043787902-84a29a6a286a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJlYXV0aWZ1bCUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D';
 
 // export default function ColorExtractor({ history, user, setHistory, initialItem }) {
-  
 //   const [imageSrc, setImageSrc] = useState(initialItem?.src || dummyImage);
 //   const [colors, setColors] = useState(initialItem?.palette || []);
 //   const navigate = useNavigate();
-//   // const { state: initialItem } = useLocation(); // incoming from HistoryPage
-
 
 //   useEffect(() => {
 //     if (initialItem) {
@@ -387,13 +383,12 @@
 //   );
 // }
 
-
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import ColorThief from 'colorthief';
 import './ColourExtractor.css';
-import PaletteGrid from '../Palettes/PaletteGrid';
 import BottomFooter from '../Footer/BottomFooter';
+// import PaletteGrid from '../Palettes/PaletteGrid';
 
 function rgbToHex(r, g, b) {
   return (
@@ -403,10 +398,8 @@ function rgbToHex(r, g, b) {
     ).join('')
   );
 }
-
 const dummyImage =
    'https://images.unsplash.com/photo-1699043787902-84a29a6a286a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGJlYXV0aWZ1bCUyMGZsb3dlcnxlbnwwfHwwfHx8MA%3D%3D';
-
 export default function ColorExtractor() {
   const navigate = useNavigate();
   const { state: initialItem } = useLocation();
@@ -524,7 +517,7 @@ export default function ColorExtractor() {
       </div>
        
       <div>
-        <PaletteGrid />
+        {/* <PaletteGrid /> */}
         <BottomFooter />
       </div>
     </div>

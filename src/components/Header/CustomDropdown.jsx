@@ -72,7 +72,7 @@ import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './CustomDropdown.css'; // Create a CSS file for styles
 
-const CustomDropdown = ({  history }) => {
+const CustomDropdown = ({  history, onOptionSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const dropdownRef = useRef(null); // Create a ref for the dropdown
@@ -92,6 +92,7 @@ const CustomDropdown = ({  history }) => {
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
+     onOptionSelect();
   };
 
   const handleClickOutside = (event) => {
@@ -120,17 +121,19 @@ const CustomDropdown = ({  history }) => {
 
   return (
     <div className="dropdown" ref={dropdownRef}>
-      <button onClick={toggleDropdown} className="dropdown-toggle">
-        Tools ▾
+      <button onClick={toggleDropdown} className="dropdown-toggle" >
+        Tools <i className="fa fa-caret-down" ></i>
       </button>
       {isOpen && (
         <div className="dropdown-menu">
           {history.length > 0 && (
             <> 
-              <button 
-                onClick={() => handleProtectedNav('/history')}
+              <button
+                onClick={() => {
+                  handleProtectedNav('/history');
+                  onOptionSelect?.();
+                }}
                 className="nav-link history-btn"
-                id='HistoryBtn'
               >
                 View History
               </button>

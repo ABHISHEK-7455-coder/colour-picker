@@ -103,14 +103,21 @@
   cursor: pointer;
   transition: transform .2s ease-out;
   font-size: 25px;
-  background-color: #475C4D;
+  /* background-color: #475C4D; */
+  background: linear-gradient(to right, #f8f8f8, #475C4D);
 }
 
-/* .file-input label:hover{
- background: linear-gradient(40deg, #ff6ec4, #7873f5);
-} */
+.file-input label:hover{
+ background: linear-gradient(to right, #080808, #f1ed36);
+ transform: scale(1.05);
+ box-shadow: 0 8px 20px rgba(212, 210, 210, 0.4);
+ border: 1px solid white;
+}
 
-
+.file-input.active {
+  background-color: #ffb3c6;
+    color: #fff;
+}
 
 
 
@@ -155,9 +162,13 @@
   font-family: "Akronim", system-ui;
   font-weight: 400;
   font-style: normal;
-
-
+  
+    background: linear-gradient(to right, #ffffff, #f1ed36);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
+
+
 
 .subtitle {
   font-size: 16px;
@@ -181,8 +192,7 @@
     width: 200px;
   height: 50px;
   border-radius: 25px;
-  background: #FF8B4E;
-  background: linear-gradient(90deg, rgba(255, 139, 78, 1) 0%, rgba(255, 3, 105, 1) 99%);
+  
   box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
 }
 
@@ -349,16 +359,21 @@
   font-style: normal;
   }
   .subtitle {
-    font-size: 20px;
-    font-weight: 400;
-  margin-bottom: 0px;
-  color: #fff;
-  margin-top: 20px;
-  margin-left: 0px;
+   font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 0px;
+        color: #cdc7c7;
+        margin-top: 10px;
+        margin-left: 0px;
   }
 
   .file-input label {
-    font-weight: 400;
+   
+    font-weight: 300;
+        margin: auto;
+       width: 198px;
+       height: 51px;  
+        margin-top: 15px;
   }
 
   .rightPanel {
@@ -372,8 +387,15 @@
   .colorGrid {
   display: flex;
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 1px;
+  flex-wrap: wrap;}
+  .forDivieded .history-btn{
+
+     width: 166px;
+     padding: 14px;
+    margin-left: 52vw;
+
+  
 }
 }
 

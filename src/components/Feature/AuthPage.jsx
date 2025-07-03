@@ -210,7 +210,7 @@
 // 4. Header now shows user avatar (AuthButton detects logged-in state)
 //  */
 import { useState } from 'react';
-import { supabase } from '../../supabaseClient';
+// import { supabase } from '../../supabaseClient';
 import { useNavigate, useLocation } from 'react-router-dom';
 import './AuthPage.css';
 

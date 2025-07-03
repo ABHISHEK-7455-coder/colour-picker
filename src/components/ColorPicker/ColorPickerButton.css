@@ -33,6 +33,9 @@
     opacity: 0.7;
     transition: opacity .2s;
 }
+strong{
+  color: black;
+}
 .slider:hover {
     opacity: 1;
 }
@@ -205,7 +208,7 @@
   .pickerAndColor {
     width: 100%;
     /* display: block; */
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-bottom: 10vh;
   }
   .react-colorful {
@@ -217,7 +220,7 @@
     width: 500px;
   }
   .color-variation {
-    height: 40px;
+    height: 140px;
      width: 80vw;
    margin: auto;
       }
@@ -231,13 +234,14 @@
   .selected-color {
     width: 100%;
     display: block;
+    font-weight: 500;
   }
 
   .color-display {
     width: 100%;
-    margin-top: -15px;
-    flex-direction: column-reverse;
-        margin: auto;
+    margin-top: -25px;
+    /* flex-direction: column; */
+    /* margin: auto; */
   }
 
   .color-picker-dropdown {

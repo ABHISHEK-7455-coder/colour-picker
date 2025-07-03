@@ -48,6 +48,22 @@
   background-color: black;
 }
 
+.SearchBtnn:hover {
+  background-color: #dde5b6;
+  color: #ffffff;
+   background: linear-gradient(to right, #000000, #57705e);
+ transform: scale(1.05);
+ border: none;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.4);
+}
+
+.SearchBtnn.active {
+  /* background-color: #ffb3c6; */
+    color: #fff;
+      background: linear-gradient(to right, #080808, #ffedd8);
+      border: none;
+}
+
 .category-filter select {
   padding: 10px;
   width: 100%;
@@ -190,8 +206,7 @@
 }
 .color-box {
     position: relative;
-    width: 21px;
-    height: 152px;
+    
     cursor: pointer;
     transition: transform 0.2s ease;
 }
@@ -247,6 +262,7 @@
   font-size: 16px;
   margin: 5px;
   color: #1e1d1d;
+  width: 70%;
 }
 
 .search-section input::placeholder {

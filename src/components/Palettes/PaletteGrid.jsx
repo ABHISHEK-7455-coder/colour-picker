@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import colorData from './Data/colorPalettes'; // Updated import to match new structure
+import colorData from './Data/ColorPalettes'; // Updated import to match new structure
 import './PaletteGrid.css';
 import Footer from '../Footer/Footer';
 

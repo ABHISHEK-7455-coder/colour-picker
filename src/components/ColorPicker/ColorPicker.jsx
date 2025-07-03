@@ -198,6 +198,7 @@ const adjustColorBrightness = (hex, percent) => {
     };
 
     return (
+        <>
         <div className="color-picker-container">
             <h1>Color Picker</h1>
             <p>find color that you love and choose variation customize your color </p>
@@ -241,8 +242,10 @@ const adjustColorBrightness = (hex, percent) => {
                     ))}
                 </div>
             </div>
-            <BottomFooter/>
+            
         </div>
+        <BottomFooter/>
+        </>
     );
 };
 
