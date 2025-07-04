@@ -1,0 +1,37 @@
+.gradient-text {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: bold;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: background 0.3s ease;
+}
+
+.controls {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.controls select,
+.controls input[type="color"],
+.controls button {
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background: #fff;
+  cursor: pointer;
+}
+
+.controls button {
+  background: #e2e8f0;
+}
+
+.controls button.copy {
+  background: #3b82f6;
+  color: #fff;
+}

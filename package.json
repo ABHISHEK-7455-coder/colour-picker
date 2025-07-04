@@ -24,6 +24,7 @@
     "react-loading-skeleton": "^3.5.0",
     "react-router-dom": "^7.6.3",
     "react-spinners": "^0.17.0",
+    "react-text-gradients": "^1.0.2",
     "react-webcam": "^7.2.0"
   },
   "devDependencies": {
@@ -37,5 +38,18 @@
     "globals": "^16.0.0",
     "supabase": "^2.30.4",
     "vite": "^6.3.5"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABHISHEK-7455-coder/colour-picker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ABHISHEK-7455-coder/colour-picker/issues"
+  },
+  "homepage": "https://github.com/ABHISHEK-7455-coder/colour-picker#readme"
 }

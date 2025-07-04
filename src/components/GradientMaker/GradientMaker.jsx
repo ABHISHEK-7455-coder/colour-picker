@@ -229,6 +229,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import html2canvas from 'html2canvas';
 import './GradientMaker.css';
+import GradientyReact from './TextGradient';
 
 // Custom hook for global event listeners with automatic cleanup
 function useEventListener(eventName, handler, element = document) {
@@ -486,6 +487,7 @@ const GradientMaker = () => {
           </div>
         </div>
       </div>
+      <GradientyReact />
     </div>
   );
 };

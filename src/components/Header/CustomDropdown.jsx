@@ -70,45 +70,37 @@
 
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './CustomDropdown.css'; // Create a CSS file for styles
+import './CustomDropdown.css';
 
-const CustomDropdown = ({  history, onOptionSelect }) => {
+const CustomDropdown = ({ history, onOptionSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  const dropdownRef = useRef(null); // Create a ref for the dropdown
+  const dropdownRef = useRef(null);
 
   const handleProtectedNav = (path) => {
-    // if (!user) {
-    //   navigate('/auth', { 
-    //     state: { 
-    //       from: path,
-    //       message: 'Please sign in to access this feature'
-    //     } 
-    //   });
-    // } else {
-      navigate(path);
-    // }
+    navigate(path);
+  };
+
+  const handleOptionClick = (path) => {
+    setIsOpen(false);             // ✅ Close the dropdown
+    onOptionSelect?.();           // optional callback
+    if (path) handleProtectedNav(path);
   };
 
   const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-     onOptionSelect();
+    setIsOpen((prev) => !prev);
+    onOptionSelect?.();
   };
 
   const handleClickOutside = (event) => {
-    // Check if the click is outside the dropdown
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsOpen(false);
     }
   };
 
   useEffect(() => {
-    // Add event listener for clicks
     document.addEventListener('mousedown', handleClickOutside);
-    return () => {
-      // Cleanup the event listener on component unmount
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const menuItems = [
@@ -121,28 +113,30 @@ const CustomDropdown = ({  history, onOptionSelect }) => {
 
   return (
     <div className="dropdown" ref={dropdownRef}>
-      <button onClick={toggleDropdown} className="dropdown-toggle" >
-        Tools <i className="fa fa-caret-down" ></i>
+      <button onClick={toggleDropdown} className="dropdown-toggle">
+        Tools <i className="fa fa-caret-down"></i>
       </button>
+
       {isOpen && (
         <div className="dropdown-menu">
           {history.length > 0 && (
-            <> 
+            <>
               <button
-                onClick={() => {
-                  handleProtectedNav('/history');
-                  onOptionSelect?.();
-                }}
+                onClick={() => handleOptionClick('/history')}
                 className="nav-link history-btn"
               >
                 View History
               </button>
-              <p className='dropdown-itemP'>view history what u have extract from image</p>
+              <p className="dropdown-itemP">view history what u have extract from image</p>
             </>
           )}
-          
-          {menuItems.map((item, index) => (
-            <div key={index} className="dropdown-item">
+
+          {menuItems.map((item, idx) => (
+            <div
+              key={idx}
+              className="dropdown-item"
+              onClick={() => handleOptionClick(item.link)}
+            >
               <Link to={item.link}><h4>{item.title}</h4></Link>
               <p>{item.description}</p>
             </div>

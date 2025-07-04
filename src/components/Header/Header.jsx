@@ -175,7 +175,7 @@ export default function Header({ history, user, setUser }) {
           {/* For CustomDropdown, pass the close callback into it */}
           <CustomDropdown 
             history={history} 
-            onOptionSelect={() => setOpen(false)} 
+            // onOptionSelect={() => setOpen(false)} 
           />
         </nav>
       </div>

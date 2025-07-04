@@ -187,6 +187,7 @@
     background: rgba(0,0,0,0.9);
     display: none;
     padding: 19px;
+    z-index: 5;
   }
   .navLinks.open {
     display: flex;
