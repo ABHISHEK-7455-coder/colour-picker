@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import './GradientyReact.css';
+import './TextGradient.css';
 
 const DIRECTIONS = [
   { label: '→ to right', value: 'to right' },
@@ -23,8 +23,10 @@ export default function GradientyReact() {
 
   const randomize = () => setColors([randomColor(), randomColor(), randomColor()]);
 
+ const gradient = `linear-gradient(${dir}, ${colors.join(', ')})`;
+
   const cssText = useCallback(() => {
-    return `linear-gradient(${dir}, ${colors.join(', ')})`;
+    return gradient;
   }, [dir, colors]);
 
   const copyCode = () => {
@@ -34,23 +36,35 @@ export default function GradientyReact() {
 
   return (
     <div style={{ maxWidth: '600px', margin: '2rem auto', textAlign: 'center' }}>
-      <h1 className="gradient-text" style={{ background: `linear-gradient(${dir}, ${colors.join(', ')})` }}>
+      <h1 key={gradient}  style={{
+    background: cssText(),                      // your dynamic gradient string
+    WebkitBackgroundClip: 'text',              // Safari/Chrome support
+    backgroundClip: 'text',                    // Standard
+    color: 'transparent',                      // make text fill transparent
+    WebkitTextFillColor: 'transparent',        // for WebKit browsers
+    display: 'inline-block'                    // ensure gradient bounds to text width
+  }} className="text-gradient">
         Gradient Text
       </h1>
 
       <div className="controls">
-        <label>
-          Direction:
+        <div className="direction">
+        
+          <div><h2>Direction :</h2></div>
+          <div className='select'>
           <select value={dir} onChange={e => setDir(e.target.value)}>
             {DIRECTIONS.map(d => (
               <option key={d.value} value={d.value}>{d.label}</option>
             ))}
           </select>
-        </label>
-
+          </div>
+        
+        </div>
+        
+        <div className='colors'>
         {colors.map((clr, i) => (
           <label key={i}>
-            Color stop {i + 1}:
+            {/* Color stop {i + 1}: */}
             <input
               type="color"
               value={clr}
@@ -58,6 +72,7 @@ export default function GradientyReact() {
             />
           </label>
         ))}
+        </div>
 
         <button type="button" onClick={randomize}>🎲 Randomize</button>
         <button type="button" className="copy" onClick={copyCode}>📋 Copy CSS</button>
