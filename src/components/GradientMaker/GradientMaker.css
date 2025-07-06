@@ -7,7 +7,7 @@
 
 
 
-.gradient .title {
+ .title {
     text-align: center;
     font-size: 7.5rem;
     background: linear-gradient(to right, #ffffff, #f1ed36);
@@ -156,6 +156,11 @@ input[type=range]:focus::-ms-fill-upper {
 
 .gradient-type {
     margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.direction-controls {
+  width: 100%;
 }
 
 .section-title {

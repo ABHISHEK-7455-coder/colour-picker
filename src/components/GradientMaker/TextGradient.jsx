@@ -36,16 +36,21 @@ export default function GradientyReact() {
 
   return (
     <div style={{ maxWidth: '600px', margin: '2rem auto', textAlign: 'center' }}>
-      <h1 key={gradient}  style={{
-    background: cssText(),                      // your dynamic gradient string
-    WebkitBackgroundClip: 'text',              // Safari/Chrome support
-    backgroundClip: 'text',                    // Standard
-    color: 'transparent',                      // make text fill transparent
-    WebkitTextFillColor: 'transparent',        // for WebKit browsers
-    display: 'inline-block'                    // ensure gradient bounds to text width
+      <div key={gradient}  style={{
+    background: cssText(),                     
+    WebkitBackgroundClip: 'text',              
+    backgroundClip: 'text',                    
+    color: 'transparent',                      
+    WebkitTextFillColor: 'transparent',        
+    display: 'inline-block',  
+    width:"100%",
+    fontSize: "80px",
+    fontWeight: "600",
+    fontFamily: "monospace"
+    
   }} className="text-gradient">
         Gradient Text
-      </h1>
+      </div>
 
       <div className="controls">
         <div className="direction">
