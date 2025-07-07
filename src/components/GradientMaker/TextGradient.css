@@ -50,5 +50,12 @@ select {
   color: #fff;
 }
 
+@media (max-width: 390px){
+  .text-gradient {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+
 
 
