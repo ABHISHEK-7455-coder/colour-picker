@@ -44,7 +44,7 @@ export default function GradientyReact() {
     WebkitTextFillColor: 'transparent',        
     display: 'inline-block',  
     width:"100%",
-    fontSize: "80px",
+    fontSize: "70px",
     fontWeight: "600",
     fontFamily: "monospace"
     

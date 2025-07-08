@@ -230,6 +230,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import html2canvas from 'html2canvas';
 import './GradientMaker.css';
 import GradientyReact from './TextGradient';
+import Blob from './Blob';
 
 // Custom hook for global event listeners with automatic cleanup
 function useEventListener(eventName, handler, element = document) {
@@ -488,6 +489,16 @@ const GradientMaker = () => {
         </div>
       </div>
       <GradientyReact />
+      <Blob
+        className="w-screen h-screen overflow-hidden bg-slate-100 relative"
+        size="30vw"
+        initialColor="#00C9A7"
+        glow={true}
+        animate={true}
+        speed={3000}
+        blend={true}
+        controlledShape={null} // pass a path string to control shape externally
+      />
     </div>
   );
 };
